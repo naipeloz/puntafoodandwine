@@ -1,16 +1,26 @@
 import type { Metadata } from "next";
-import { Bebas_Neue, Outfit } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 
-const bebasNeue = Bebas_Neue({
-  variable: "--font-bebas-neue",
-  subsets: ["latin"],
-  weight: "400",
+const displayFont = localFont({
+  src: "../public/fonts/newake-demo-400.otf",
+  variable: "--font-newake",
 });
 
-const outfit = Outfit({
-  variable: "--font-outfit",
-  subsets: ["latin"],
+const sansFont = localFont({
+  src: [
+    {
+      path: "../public/fonts/Actay-Regular.otf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/ActayWide-Bold.otf",
+      weight: "700",
+      style: "normal",
+    },
+  ],
+  variable: "--font-actay",
 });
 
 export const metadata: Metadata = {
@@ -58,7 +68,7 @@ export default function RootLayout({
   return (
     <html lang="es">
       <body
-        className={`${bebasNeue.variable} ${outfit.variable} antialiased font-sans`}
+        className={`${displayFont.variable} ${sansFont.variable} antialiased font-sans`}
       >
         <script
           type="application/ld+json"

@@ -3,7 +3,6 @@
 import { useEffect, useState, useRef } from "react";
 
 const SLIDES = [
-    { type: "video", src: "/assets/PF&W - Aftermovie.mp4" },
     { type: "image", src: "/assets/PFW-182.JPG" },
     { type: "image", src: "/assets/PFW-230.JPG" },
     { type: "image", src: "/assets/PFW-234.JPG" },
