@@ -1,3 +1,4 @@
+import { SpeedInsights } from "@vercel/speed-insights/next"
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import InfoSection from "./components/InfoSection";
@@ -7,6 +8,7 @@ import TicketsSection from "./components/TicketsSection";
 import MapSection from "./components/MapSection";
 import SponsorsSection from "./components/SponsorsSection";
 import Footer from "./components/Footer";
+
 
 export default function Home() {
   return (
