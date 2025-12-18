@@ -1,6 +1,7 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import InteractiveMap from "../components/InteractiveMap";
+import TimelineSection from "../components/TimelineSection"; // Added import
 
 export default function ElEvento() {
     return (
@@ -32,6 +33,9 @@ export default function ElEvento() {
                     </div>
                 </div>
             </section>
+
+            {/* Timeline/Itinerary */}
+            <TimelineSection />
 
             {/* Map */}
             <InteractiveMap />

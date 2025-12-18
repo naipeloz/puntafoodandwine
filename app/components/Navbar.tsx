@@ -45,10 +45,7 @@ export default function Navbar({ variant = "transparent" }: NavbarProps) {
                     <a href="/el-evento" className={`hidden md:block ${textColorClass}/80 ${hoverTextColorClass} text-sm uppercase tracking-wider transition-colors`}>
                         El Evento
                     </a>
-                    <a href="#" className={`hidden md:block ${textColorClass}/80 ${hoverTextColorClass} text-sm uppercase tracking-wider transition-colors`}>
-                        Cronograma
-                    </a>
-                    <a href="#" className={`hidden md:block ${textColorClass}/80 ${hoverTextColorClass} text-sm uppercase tracking-wider transition-colors`}>
+                    <a href="/#tickets" className={`hidden md:block ${textColorClass}/80 ${hoverTextColorClass} text-sm uppercase tracking-wider transition-colors`}>
                         Entradas
                     </a>
                     <a href="#" className={`hidden md:block ${textColorClass}/80 ${hoverTextColorClass} text-sm uppercase tracking-wider transition-colors`}>
