@@ -30,13 +30,18 @@ export default function ImaginateSection() {
             </div>
 
             <div className="max-w-4xl mx-auto px-6 text-center z-10" style={{ transform: `translateY(${offset * -0.2}px)` }}>
-                <h2 className="font-display text-4xl md:text-6xl text-primary leading-tight">
-                    "Imáginate una noche bajo las estrellas,<br />
-                    donde el sabor y el arte se encuentran."
+                <h2 className="font-display text-3xl md:text-5xl text-primary leading-tight mb-8">
+                    "Frente al océano, cuando cae el sol, <br />
+                    te espera la magia."
                 </h2>
-                <p className="mt-8 text-black/60 font-light text-lg md:text-xl max-w-2xl mx-auto">
-                    Una experiencia sensorial única que despierta todos tus sentidos.
-                </p>
+                <div className="text-black/60 font-light text-lg md:text-xl max-w-3xl mx-auto space-y-4">
+                    <p>
+                        Thomas Troisgros —Chef del Año 2025, estrella Michelin y cuarta generación de una de las grandes familias de la gastronomía mundial— llega desde Río a La Susana para presentar, por primera vez, un recorrido por sus cuatro restaurantes icónicos: Oseille, Toto Ipanema, C.T. Boucherie y Tijolada junto a vinos de alta gama, tragos de autor y DJ en vivo.
+                    </p>
+                    <p className="font-medium text-black/80">
+                        El evento gastronómico del verano se llama Universo Troisgros.
+                    </p>
+                </div>
             </div>
         </section>
     );

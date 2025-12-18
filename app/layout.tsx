@@ -28,6 +28,21 @@ export const metadata: Metadata = {
   title: "Punta Food & Wine 2025 | Grand Tasting",
   description: "El festival gastronómico más exclusivo del verano en Punta del Este. Chefs internacionales, bodegas de primera línea y una experiencia inolvidable.",
   keywords: ["Punta del Este", "Food & Wine", "Festival Gastronómico", "Eventos Uruguay 2025", "Vinos", "Chefs"],
+  icons: {
+    icon: [
+      { url: '/assets/favicon/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+      { url: '/assets/favicon/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
+    ],
+    apple: [
+      { url: '/assets/favicon/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
+    ],
+    other: [
+      {
+        rel: 'manifest',
+        url: '/assets/favicon/site.webmanifest',
+      },
+    ],
+  },
   openGraph: {
     title: "Punta Food & Wine 2025",
     description: "El festival gastronómico más exclusivo del verano.",

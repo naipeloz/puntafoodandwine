@@ -24,6 +24,12 @@
   }
 }
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 120px;
+  /* Offset for sticky header */
+}
+
 body {
   background: var(--background);
   color: var(--foreground);

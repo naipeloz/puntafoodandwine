@@ -5,7 +5,6 @@ import { useEffect, useState, useRef } from "react";
 const SLIDES = [
     { type: "image", src: "/assets/PFW-182.JPG" },
     { type: "image", src: "/assets/PFW-182.JPG" },
-    { type: "image", src: "/assets/PFW-182.JPG", isSignup: true },
 ];
 
 export default function Hero() {
@@ -102,46 +101,22 @@ export default function Hero() {
 
             {/* Overlay Content */}
             <div className="relative z-10 flex flex-col items-center text-center p-4 max-w-4xl mt-16">
-                {SLIDES[currentSlide].isSignup ? (
-                    <div className="flex flex-col items-center animate-fade-in">
-                        <h2 className="text-secondary tracking-[0.2em] uppercase mb-8 text-sm md:text-base font-medium drop-shadow-md">
-                            ¡Nos vemos el año que viene!
-                        </h2>
-                        <div className="flex w-full max-w-xl bg-white/10 backdrop-blur-md rounded-full p-2 border border-white/30 items-center gap-2">
-                            <input
-                                type="email"
-                                placeholder="Tu email"
-                                className="bg-transparent border-none outline-none text-white placeholder-white/50 px-6 py-3 flex-grow font-light text-lg min-w-0"
-                            />
-                            {/* Icon separator/decoration */}
-                            <div className="hidden sm:flex items-center justify-center w-8 h-8 bg-white text-black rounded-full shrink-0">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4">
-                                    <path fillRule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zM12.75 9a.75.75 0 00-1.5 0v2.25H9a.75.75 0 000 1.5h2.25V15a.75.75 0 001.5 0v-2.25H15a.75.75 0 000-1.5h-2.25V9z" clipRule="evenodd" />
-                                </svg>
-                            </div>
-                            <button className="bg-[#B67784] hover:bg-[#965764] text-white text-xs md:text-sm font-bold py-3 px-6 md:px-8 rounded-full uppercase tracking-widest transition-all whitespace-nowrap shadow-lg">
-                                Invitando al Punta Food & Wine 2026
-                            </button>
-                        </div>
+                <div className="flex flex-col items-center animate-fade-in">
+                    <h2 className="text-secondary tracking-[0.2em] uppercase mb-4 text-sm md:text-base font-medium drop-shadow-md">
+                        Summer edition
+                    </h2>
+                    <h1 className="font-display text-5xl md:text-8xl font-bold uppercase tracking-wide mb-6 leading-none drop-shadow-lg">
+                        Universo <br /> Troisgros
+                    </h1>
+                    <div className="flex flex-col md:flex-row gap-4 mt-8">
+                        <button className="bg-primary hover:bg-[#965764] text-white font-bold py-3 px-8 rounded-full transition-all duration-300 uppercase tracking-wider text-sm shadow-lg transform hover:scale-105 border border-primary">
+                            Comprar Entradas
+                        </button>
+                        <button className="border border-white hover:bg-primary hover:border-primary hover:text-white text-white font-bold py-3 px-8 rounded-full transition-all duration-300 uppercase tracking-wider text-sm shadow-sm backdrop-blur-sm bg-black/10">
+                            Más Información
+                        </button>
                     </div>
-                ) : (
-                    <>
-                        <h2 className="text-secondary tracking-[0.2em] uppercase mb-4 text-sm md:text-base font-medium drop-shadow-md">
-                            Summer edition
-                        </h2>
-                        <h1 className="font-display text-5xl md:text-8xl font-bold uppercase tracking-wide mb-6 leading-none drop-shadow-lg">
-                            Universo <br /> Troigros
-                        </h1>
-                        <div className="flex flex-col md:flex-row gap-4 mt-8">
-                            <button className="bg-primary hover:bg-[#965764] text-white font-bold py-3 px-8 rounded-full transition-all duration-300 uppercase tracking-wider text-sm shadow-lg transform hover:scale-105 border border-primary">
-                                Comprar Entradas
-                            </button>
-                            <button className="border border-white hover:bg-primary hover:border-primary hover:text-white text-white font-bold py-3 px-8 rounded-full transition-all duration-300 uppercase tracking-wider text-sm shadow-sm backdrop-blur-sm bg-black/10">
-                                Más Información
-                            </button>
-                        </div>
-                    </>
-                )}
+                </div>
             </div>
 
             {/* Decorative arrow/scroller */}

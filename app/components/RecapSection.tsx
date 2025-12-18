@@ -25,6 +25,10 @@ export default function RecapSection() {
 
             <div className="relative z-20 max-w-6xl mx-auto px-6 flex flex-col items-center text-center">
 
+                <h2 className="font-display text-5xl md:text-7xl text-white mb-16 tracking-wider uppercase drop-shadow-lg">
+                    Recap 2025
+                </h2>
+
                 {/* Intro Texts */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-20 w-full">
                     <div className="flex flex-col items-center">
