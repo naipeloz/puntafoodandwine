@@ -42,7 +42,7 @@ export default function SponsorsSection() {
                 <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12 opacity-80">
                     <img src="/assets/sponsors/uruguay_xxi/logo.png" alt="Uruguay XXI" className="h-8 object-contain invert brightness-0" />
                     {/* Black River uses PDF, fallback text */}
-                    <div className="h-8 w-24 bg-white/10 text-[8px] flex items-center justify-center text-white">Black River</div>
+                    <img src="/assets/sponsors/black_river/logo_white.png" alt="Black River" className="h-8 object-contain" />
                     <img src="/assets/sponsors/sofite/Logo con lien_blanco.png" alt="Sofitel" className="h-8 object-contain" />
                     <img src="/assets/sponsors/intendecia_maldonado/logo.png" alt="Intendencia" className="h-8 object-contain invert brightness-0" />
                 </div>
@@ -78,22 +78,20 @@ export default function SponsorsSection() {
                 <div className="flex flex-col items-center space-y-4 pt-8">
                     <span className="text-[10px] uppercase tracking-[0.2em] text-[#B67784]">Bodegas</span>
                     <span className="text-[10px] uppercase tracking-[0.2em] text-white/50">Master Wine Partner</span>
-                    <img src="/assets/sponsors/sacromonte/logo.png" alt="Sacromonte" className="h-10 object-contain invert brightness-0" />
+                    <img src="/assets/sponsors/bodegas/sacromonte/logo_white.png" alt="Sacromonte" className="h-10 object-contain" />
                 </div>
 
                 {/* PREMIUM WINE PARTNERS */}
                 <div className="w-full">
                     <span className="text-[10px] uppercase tracking-[0.2em] text-white/50 block mb-6">Premium Wine Partners</span>
                     <div className="flex flex-wrap justify-center items-center gap-8 opacity-80">
-                        {/* Placeholder lists based on user text */}
-                        <div className="h-8 w-24 bg-white/10 text-[8px] flex items-center justify-center text-white">Gimenez Mendez</div>
-                        <div className="h-8 w-24 bg-white/10 text-[8px] flex items-center justify-center text-white">Cofradía</div>
-                        <div className="h-8 w-24 bg-white/10 text-[8px] flex items-center justify-center text-white">Vinos del Mar</div>
-                        <div className="h-8 w-24 bg-white/10 text-[8px] flex items-center justify-center text-white">Montes de Oca</div>
-                        {/* Viña Eden path check */}
-                        <div className="h-8 w-24 bg-white/10 text-[8px] flex items-center justify-center text-white">Viña Eden</div>
-                        <div className="h-8 w-24 bg-white/10 text-[8px] flex items-center justify-center text-white">Narbona</div>
-                        <div className="h-8 w-24 bg-white/10 text-[8px] flex items-center justify-center text-white">Luigi Bosca</div>
+                        <img src="/assets/sponsors/bodegas/gimenez_mendez/logo.png" alt="Gimenez Mendez" className="h-10 object-contain invert brightness-0" />
+                        <img src="/assets/sponsors/bodegas/cofradia_sierras/logo_full_white.png" alt="Cofradía" className="h-12 object-contain" />
+                        <img src="/assets/sponsors/bodegas/cia_vinos_mar/logo-vectorizado.png" alt="Vinos del Mar" className="h-10 object-contain invert brightness-0" />
+                        <img src="/assets/sponsors/bodegas/cantera_montes_oca/logo.png" alt="Montes de Oca" className="h-10 object-contain invert brightness-0" />
+                        <img src="/assets/sponsors/bodegas/viña_eden/logo_blanco.png" alt="Viña Eden" className="h-10 object-contain" />
+                        <img src="/assets/sponsors/bodegas/narbona/logo.png" alt="Narbona" className="h-8 object-contain invert brightness-0" />
+                        <img src="/assets/sponsors/bodegas/luigi_bosca/logo_white.png" alt="Luigi Bosca" className="h-10 object-contain" />
                     </div>
                 </div>
 
@@ -101,9 +99,9 @@ export default function SponsorsSection() {
                 <div className="w-full">
                     <span className="text-[10px] uppercase tracking-[0.2em] text-white/50 block mb-6">Wine Partners</span>
                     <div className="flex flex-wrap justify-center items-center gap-8 opacity-80">
-                        <div className="h-8 w-24 bg-white/10 text-[8px] flex items-center justify-center text-white">Garzon</div>
-                        <div className="h-8 w-24 bg-white/10 text-[8px] flex items-center justify-center text-white">De Lucca</div>
-                        <div className="h-8 w-24 bg-white/10 text-[8px] flex items-center justify-center text-white">Ranchos</div>
+                        <img src="/assets/sponsors/bodegas/garzon/logo.png" alt="Garzon" className="h-10 object-contain invert brightness-0" />
+                        <img src="/assets/sponsors/bodegas/de_lucca/logo_white.png" alt="De Lucca" className="h-10 object-contain" />
+                        <img src="/assets/sponsors/bodegas/los_ranchos/logo.png" alt="Ranchos" className="h-12 object-contain invert brightness-0" />
                     </div>
                 </div>
 
