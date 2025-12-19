@@ -8,7 +8,7 @@ export default function ImaginateSection() {
             </div>
 
             <div className="max-w-5xl mx-auto px-6 text-center z-10">
-                <h2 className="font-display text-3xl md:text-5xl text-primary leading-tight mb-0">
+                <h2 className="font-sans text-3xl md:text-5xl text-primary leading-tight mb-0">
                     Frente al océano, cuando cae el sol, <br />
                     te espera la magia.
                 </h2>

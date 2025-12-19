@@ -11,7 +11,7 @@ const STATIONS = [
     },
     {
         name: "Toto Ipanema",
-        image: "/assets/PFW-234.JPG", // Placeholder
+        image: "/assets/estaciones/toto/img_1.jpeg",
         description: "Una selección curada de las mejores bodegas.",
         link: "https://www.instagram.com/toto.ipanema/"
     },
@@ -23,20 +23,34 @@ const STATIONS = [
     },
     {
         name: "Tijolada",
-        image: "/assets/PFW-182.JPG", // Placeholder (reused)
+        image: "/assets/estaciones/tijolada/img_1.jpeg",
         description: "Mixología creativa para brindar.",
         link: "https://www.instagram.com/tijoladabar/"
+    },
+    {
+        name: "Estación 5",
+        image: "/assets/PFW-326.JPG", // Placeholder
+        description: "Una experiencia culinaria más por descubrir.",
+        link: "#"
+    },
+    {
+        name: "Estación 6",
+        image: "/assets/PFW-359.JPG", // Placeholder
+        description: "Sabores únicos en un entorno inigualable.",
+        link: "#"
     }
 ];
 
-export default function StationsSection() {
+export default function StationsSection({ disableHeader = false }: { disableHeader?: boolean }) {
     return (
         <section className="bg-white py-20 px-4">
             <div className="max-w-7xl mx-auto">
-                <div className="text-center mb-16">
-                    <h2 className="font-display text-4xl md:text-5xl text-black uppercase mb-4">Experiencias</h2>
-                    <p className="text-black/60 font-light max-w-xl mx-auto">Descubre las diferentes estaciones que hemos preparado para ti.</p>
-                </div>
+                {!disableHeader && (
+                    <div className="text-center mb-16">
+                        <h2 className="font-display text-4xl md:text-5xl text-black uppercase mb-4">Experiencias</h2>
+                        <p className="text-black/60 font-light max-w-xl mx-auto">Descubre las diferentes estaciones que hemos preparado para ti.</p>
+                    </div>
+                )}
 
                 <div className="flex flex-col gap-0">
                     {STATIONS.map((station, idx) => (

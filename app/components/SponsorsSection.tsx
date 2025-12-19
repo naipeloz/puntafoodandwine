@@ -1,54 +1,156 @@
+"use client";
+
 export default function SponsorsSection() {
-
-
     return (
-        <section className="bg-black py-20 px-4 border-t border-white/10">
-            <div className="max-w-5xl mx-auto text-center">
+        <section className="bg-black py-20 px-6 border-t border-white/10">
+            <div className="max-w-4xl mx-auto flex flex-col items-center text-center space-y-16">
 
-                {/* Group 1 */}
-                <div className="mb-12">
-                    <h3 className="text-white/40 uppercase tracking-widest text-xs mb-6 font-bold">
-                        Organizan
-                    </h3>
-                    <div className="flex justify-center gap-8 flex-wrap items-center">
-                        <div className="w-32 opacity-70 hover:opacity-100 transition-opacity">
-                            <img src="/assets/sponsors/AEROPUERTO/isologotipo-aeropuerto-punta-del-este-rgb-horizontal.png" alt="Aeropuerto Punta del Este" className="brightness-0 invert" />
-                        </div>
-                        {/* Add other organizers if known, otherwise kept minimal */}
+                {/* Title */}
+                <h2 className="font-display text-4xl text-[#B67784] uppercase tracking-widest mb-8">
+                    Sponsors
+                </h2>
+
+                {/* PRESENTA */}
+                <div className="flex flex-col items-center space-y-4">
+                    <span className="text-[10px] uppercase tracking-[0.2em] text-white/50">Presenta</span>
+                    <img src="/assets/sponsors/itau/logo_personal_bank.png" alt="Itau Personal Bank" className="h-12 md:h-16 object-contain invert brightness-0" />
+                </div>
+
+                {/* OFFICIAL MOBILITY PARTNER */}
+                <div className="flex flex-col items-center space-y-4">
+                    <span className="text-[10px] uppercase tracking-[0.2em] text-white/50">Official Mobility Partner</span>
+                    <img src="/assets/sponsors/KIA/White/RGB Color (For Digital)/Logo.png" alt="Kia" className="h-8 md:h-12 object-contain" />
+                </div>
+
+                {/* AUSPICIAN */}
+                <div className="w-full">
+                    <span className="text-[10px] uppercase tracking-[0.2em] text-white/50 block mb-8">Auspician</span>
+                    <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12 opacity-80">
+                        {/* Tienda Inglesa */}
+                        <img src="/assets/sponsors/TIENDA INGLESA/LOGO CAVA UNIQUE.pdf" alt="Tienda Inglesa" className="h-8 object-contain hidden" />
+                        {/* PDF? Need png. Placeholder for now */}
+                        <div className="h-8 w-24 bg-white/10 text-[8px] flex items-center justify-center text-white">Tienda Inglesa</div>
+
+                        <img src="/assets/sponsors/miniterio_turismo/logo_horizontal_white.png" alt="Uruguay Natural" className="h-8 object-contain" />
+                        <img src="/assets/sponsors/viasono/logo.png" alt="Viasono" className="h-6 object-contain invert brightness-0" />
+                        <img src="/assets/sponsors/aeropuerto/logo.png" alt="Aeropuerto" className="h-8 object-contain invert brightness-0" />
+                        <img src="/assets/sponsors/grand_hotel/logo.png" alt="The Grand Hotel" className="h-8 object-contain invert brightness-0" />
                     </div>
                 </div>
 
-                {/* Group 2 */}
-                <div>
-                    <h3 className="text-white/40 uppercase tracking-widest text-xs mb-8 font-bold">
-                        Acompañan
-                    </h3>
-                    <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center justify-items-center">
-                        {/* ATREVIA */}
-                        <div className="w-24 opacity-50 hover:opacity-100 transition-opacity">
-                            <img src="/assets/sponsors/ATREVIA/Logo ATREVIA blanco sin claim.png" alt="Atrevia" />
-                        </div>
-                        {/* CARPANO */}
-                        <div className="w-24 opacity-50 hover:opacity-100 transition-opacity">
-                            <img src="/assets/sponsors/CARPANO/Carpano_Logos_BLANCO-2.png" alt="Carpano" />
-                        </div>
-                        {/* CLARIN */}
-                        <div className="w-24 opacity-50 hover:opacity-100 transition-opacity">
-                            <img src="/assets/sponsors/CLARÍN/logo clarin circulo rojo.png" alt="Clarin" />
-                        </div>
-                        {/* EL PAIS */}
-                        <div className="w-24 opacity-50 hover:opacity-100 transition-opacity">
-                            <img src="/assets/sponsors/EL PAÍS/El_Pais_Uruguay.svg.png" alt="El Pais" />
-                        </div>
-                        {/* ITAU */}
-                        <div className="w-24 opacity-50 hover:opacity-100 transition-opacity">
-                            <img src="/assets/sponsors/ITAU/itau personal bank.png" alt="Itau" />
-                        </div>
-                        {/* KIA */}
-                        <div className="w-24 opacity-50 hover:opacity-100 transition-opacity">
-                            <img src="/assets/sponsors/KIA/White/RGB Color (For Digital)/Logo.png" alt="Kia" />
-                        </div>
-                        {/* Other Placeholders/Generics if needed */}
+                {/* Row 4: Uruguay XXI, Black River, Sofitel, Intendencia */}
+                <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12 opacity-80">
+                    <img src="/assets/sponsors/uruguay_xxi/logo.png" alt="Uruguay XXI" className="h-8 object-contain invert brightness-0" />
+                    {/* Black River uses PDF, fallback text */}
+                    <div className="h-8 w-24 bg-white/10 text-[8px] flex items-center justify-center text-white">Black River</div>
+                    <img src="/assets/sponsors/sofite/Logo con lien_blanco.png" alt="Sofitel" className="h-8 object-contain" />
+                    <img src="/assets/sponsors/intendecia_maldonado/logo.png" alt="Intendencia" className="h-8 object-contain invert brightness-0" />
+                </div>
+
+                {/* Row 5: Mar Austral, Punta del Este, etc */}
+                <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12 opacity-80">
+                    <img src="/assets/sponsors/mar_austral/logo.png" alt="Mar Austral" className="h-8 object-contain invert brightness-0" />
+                    {/* Punta del Este Municipio logo? */}
+                    <div className="h-8 w-24 bg-white/10 text-[8px] flex items-center justify-center text-white">Punta del Este</div>
+
+                    {/* Posada del Faro (not seen in find list? check later) */}
+                    <img src="/assets/sponsors/dos_anclas/logo.png" alt="Dos Anclas" className="h-6 object-contain invert brightness-0" />
+
+                    {/* Talar? Corp Gastronomica? */}
+                    <img src="/assets/sponsors/corporacion_gastronomica/logo.png" alt="Corp Gastronomica" className="h-8 object-contain invert brightness-0" />
+
+                    <img src="/assets/sponsors/smeg/logo_white.png" alt="Smeg" className="h-6 object-contain" />
+                    <img src="/assets/sponsors/harvest/logo_white.png" alt="Harvest" className="h-6 object-contain" />
+                    <img src="/assets/sponsors/aqa/logo.png" alt="AQA" className="h-6 object-contain invert brightness-0" />
+                    <img src="/assets/sponsors/carpano/logo_white.png" alt="Carpano" className="h-6 object-contain" />
+
+                    {/* Haagen Dazs, Centenario, Olivos, Covello, UTE, Chefworks */}
+                    <img src="/assets/sponsors/haagen_dazs/Haagen Dazs logo.png" alt="Haagen Dazs" className="h-6 object-contain invert brightness-0" />
+                    <div className="h-8 w-24 bg-white/10 text-[8px] flex items-center justify-center text-white">Centenario</div>
+                    {/* Olivos PDF */}
+                    <div className="h-8 w-24 bg-white/10 text-[8px] flex items-center justify-center text-white">Olivos</div>
+                    <img src="/assets/sponsors/covello/logo.png" alt="Covello" className="h-5 object-contain invert brightness-0" />
+                    <img src="/assets/sponsors/ute/logo_white.png" alt="UTE" className="h-6 object-contain" />
+                    <div className="h-8 w-24 bg-white/10 text-[8px] flex items-center justify-center text-white">Chef Works</div>
+                </div>
+
+                {/* BODEGAS */}
+                <div className="flex flex-col items-center space-y-4 pt-8">
+                    <span className="text-[10px] uppercase tracking-[0.2em] text-[#B67784]">Bodegas</span>
+                    <span className="text-[10px] uppercase tracking-[0.2em] text-white/50">Master Wine Partner</span>
+                    <img src="/assets/sponsors/sacromonte/logo.png" alt="Sacromonte" className="h-10 object-contain invert brightness-0" />
+                </div>
+
+                {/* PREMIUM WINE PARTNERS */}
+                <div className="w-full">
+                    <span className="text-[10px] uppercase tracking-[0.2em] text-white/50 block mb-6">Premium Wine Partners</span>
+                    <div className="flex flex-wrap justify-center items-center gap-8 opacity-80">
+                        {/* Placeholder lists based on user text */}
+                        <div className="h-8 w-24 bg-white/10 text-[8px] flex items-center justify-center text-white">Gimenez Mendez</div>
+                        <div className="h-8 w-24 bg-white/10 text-[8px] flex items-center justify-center text-white">Cofradía</div>
+                        <div className="h-8 w-24 bg-white/10 text-[8px] flex items-center justify-center text-white">Vinos del Mar</div>
+                        <div className="h-8 w-24 bg-white/10 text-[8px] flex items-center justify-center text-white">Montes de Oca</div>
+                        {/* Viña Eden path check */}
+                        <div className="h-8 w-24 bg-white/10 text-[8px] flex items-center justify-center text-white">Viña Eden</div>
+                        <div className="h-8 w-24 bg-white/10 text-[8px] flex items-center justify-center text-white">Narbona</div>
+                        <div className="h-8 w-24 bg-white/10 text-[8px] flex items-center justify-center text-white">Luigi Bosca</div>
+                    </div>
+                </div>
+
+                {/* WINE PARTNERS */}
+                <div className="w-full">
+                    <span className="text-[10px] uppercase tracking-[0.2em] text-white/50 block mb-6">Wine Partners</span>
+                    <div className="flex flex-wrap justify-center items-center gap-8 opacity-80">
+                        <div className="h-8 w-24 bg-white/10 text-[8px] flex items-center justify-center text-white">Garzon</div>
+                        <div className="h-8 w-24 bg-white/10 text-[8px] flex items-center justify-center text-white">De Lucca</div>
+                        <div className="h-8 w-24 bg-white/10 text-[8px] flex items-center justify-center text-white">Ranchos</div>
+                    </div>
+                </div>
+
+                {/* CULINARY PARTNER */}
+                <div className="flex flex-col items-center space-y-4">
+                    <span className="text-[10px] uppercase tracking-[0.2em] text-[#B67784]">Culinary Partner</span>
+                    <img src="/assets/sponsors/vik/logo.png" alt="Vik Retreats" className="h-8 object-contain invert brightness-0" />
+                </div>
+
+                {/* MEDICAL PARTNER */}
+                <div className="flex flex-col items-center space-y-4">
+                    <span className="text-[10px] uppercase tracking-[0.2em] text-[#B67784]">Medical Partner</span>
+                    <img src="/assets/sponsors/bluecross/logo_horizontal.png" alt="BlueCross" className="h-8 object-contain invert brightness-0" />
+                </div>
+
+                {/* MEDIA PARTNERS */}
+                <div className="w-full">
+                    <span className="text-[10px] uppercase tracking-[0.2em] text-[#B67784] block mb-6">Media Partners</span>
+                    <div className="flex flex-wrap justify-center items-center gap-8 opacity-80">
+                        <img src="/assets/sponsors/el_pais/logo.svg.png" alt="El Pais" className="h-6 object-contain invert brightness-0" />
+                        <img src="/assets/sponsors/clarin/logo.png" alt="Clarin" className="h-6 object-contain invert brightness-0" />
+                        <div className="h-8 w-24 bg-white/10 text-[8px] flex items-center justify-center text-white">Hola / Mola</div>
+                        <img src="/assets/sponsors/mola/logo.png" alt="Mola" className="h-6 object-contain invert brightness-0" />
+                    </div>
+                </div>
+
+                {/* APOYAN */}
+                <div className="w-full">
+                    <span className="text-[10px] uppercase tracking-[0.2em] text-[#B67784] block mb-6">Apoyan</span>
+                    <div className="flex flex-wrap justify-center items-center gap-8 opacity-80">
+                        <img src="/assets/sponsors/life/logo_vertical_white.png" alt="Life Cinemas" className="h-8 object-contain" />
+                        <img src="/assets/sponsors/bohemia/logo.png" alt="Bohemia" className="h-8 object-contain invert brightness-0" />
+                    </div>
+                </div>
+
+                {/* LIFESTYLE PARTNER */}
+                <div className="flex flex-col items-center space-y-4">
+                    <span className="text-[10px] uppercase tracking-[0.2em] text-[#B67784]">Lifestyle Partner</span>
+                    <img src="/assets/sponsors/optica_nova/logo.png" alt="Optica Nova" className="h-8 object-contain invert brightness-0" />
+                </div>
+
+                {/* COMUNICACION */}
+                <div className="w-full">
+                    <span className="text-[10px] uppercase tracking-[0.2em] text-[#B67784] block mb-6">Comunicación</span>
+                    <div className="flex flex-wrap justify-center items-center gap-8 opacity-80">
+                        <img src="/assets/sponsors/atrevia/logo-white.png" alt="Atrevia" className="h-5 object-contain" />
+                        <img src="/assets/sponsors/from/logo.png" alt="From" className="h-5 object-contain invert brightness-0" />
                     </div>
                 </div>
 

@@ -31,9 +31,11 @@ export default function Navbar({ variant = "transparent" }: NavbarProps) {
                 {/* Logo */}
                 <div className="hidden md:block">
                     <a href="/">
-                        <h1 className={`${textColorClass} font-display text-2xl tracking-widest uppercase transition-colors`}>
-                            Punta Food & Wine
-                        </h1>
+                        <img
+                            src="/assets/logos_pfw/horizontal-black.png"
+                            alt="Punta Food & Wine"
+                            className={`h-8 md:h-10 w-auto object-contain transition-all duration-300 ${!(isScrolled || isLightVariant) ? "brightness-0 invert" : ""}`}
+                        />
                     </a>
                 </div>
 

@@ -19,7 +19,7 @@ export default function ChefsSection() {
                     <div className="flex flex-col items-center text-center md:items-start md:text-left gap-6">
                         <div className="w-full aspect-[4/5] bg-black/5 relative overflow-hidden rounded-sm">
                             <img
-                                src="/assets/chefs/troisgos/WhatsApp Image 2025-12-10 at 1.11.57 PM.jpeg"
+                                src="/assets/chefs/troisgos/img_full.jpeg"
                                 alt="Thomas Troisgros"
                                 className="absolute inset-0 w-full h-full object-cover hover:scale-105 transition-transform duration-700"
                             />

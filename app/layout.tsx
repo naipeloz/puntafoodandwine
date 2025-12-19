@@ -61,6 +61,10 @@ export const metadata: Metadata = {
   },
 };
 
+import Loader from "./components/Loader";
+
+// ... existing imports
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -70,7 +74,7 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@type": "Event",
     "name": "Universo Troisgros - Punta Food & Wine",
-    "startDate": "2025-02-05T18:00", // Start time updated to 18:00 based on text
+    "startDate": "2025-02-05T18:00",
     "endDate": "2025-02-06T00:00",
     "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
     "eventStatus": "https://schema.org/EventScheduled",
@@ -102,6 +106,7 @@ export default function RootLayout({
       <body
         className={`${displayFont.variable} ${sansFont.variable} antialiased font-sans`}
       >
+        <Loader />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
