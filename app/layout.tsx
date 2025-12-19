@@ -25,9 +25,9 @@ const sansFont = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Punta Food & Wine 2025 | Grand Tasting",
-  description: "El festival gastronómico más exclusivo del verano en Punta del Este. Chefs internacionales, bodegas de primera línea y una experiencia inolvidable.",
-  keywords: ["Punta del Este", "Food & Wine", "Festival Gastronómico", "Eventos Uruguay 2025", "Vinos", "Chefs"],
+  title: "Universo Troisgros | Punta Food & Wine 2025",
+  description: "Frente al océano, cuando cae el sol, te espera la magia. Thomas Troisgros llega desde Río a La Susana para presentar Universo Troisgros. Una experiencia gastronómica única.",
+  keywords: ["Punta del Este", "Food & Wine", "Universo Troisgros", "Thomas Troisgros", "La Susana", "José Ignacio", "Oseille", "Toto Ipanema", "CT Boucherie", "Tijolada", "Eventos Uruguay 2025"],
   icons: {
     icon: [
       { url: '/assets/favicon/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
@@ -44,12 +44,20 @@ export const metadata: Metadata = {
     ],
   },
   openGraph: {
-    title: "Punta Food & Wine 2025",
-    description: "El festival gastronómico más exclusivo del verano.",
-    url: "https://puntafoodandwine.com", // Placeholder
+    title: "Universo Troisgros | Punta Food & Wine 2025",
+    description: "Frente al océano, cuando cae el sol, te espera la magia. Thomas Troisgros llega a La Susana.",
+    url: "https://puntafoodandwine.com",
     siteName: "Punta Food & Wine",
     locale: "es_UY",
     type: "website",
+    images: [
+      {
+        url: 'https://puntafoodandwine.com/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Universo Troisgros',
+      },
+    ],
   },
 };
 
@@ -61,8 +69,8 @@ export default function RootLayout({
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Event",
-    "name": "Punta Food & Wine 2025",
-    "startDate": "2025-02-05T20:00",
+    "name": "Universo Troisgros - Punta Food & Wine",
+    "startDate": "2025-02-05T18:00", // Start time updated to 18:00 based on text
     "endDate": "2025-02-06T00:00",
     "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
     "eventStatus": "https://schema.org/EventScheduled",
@@ -71,14 +79,22 @@ export default function RootLayout({
       "name": "La Susana",
       "address": {
         "@type": "PostalAddress",
-        "addressLocality": "Punta del Este",
+        "addressLocality": "José Ignacio",
         "addressCountry": "UY"
       }
     },
     "image": [
       "https://puntafoodandwine.com/og-image.jpg"
     ],
-    "description": "El festival gastronómico más exclusivo del verano en Punta del Este."
+    "description": "Frente al océano, cuando cae el sol, te espera la magia. Thomas Troisgros llega desde Río a La Susana para presentar, por primera vez, un recorrido por sus cuatro restaurantes icónicos.",
+    "performer": {
+      "@type": "Person",
+      "name": "Thomas Troisgros"
+    },
+    "organizer": {
+      "@type": "Organization",
+      "name": "Punta Food & Wine"
+    }
   };
 
   return (

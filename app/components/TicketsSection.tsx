@@ -15,9 +15,9 @@ export default function TicketsSection() {
                         $250 <span className="text-lg font-sans text-black/40 font-normal">/ pers</span>
                     </div>
 
-                    <button className="w-full bg-primary hover:bg-black text-white font-bold py-4 rounded-xl transition-all mb-8 shadow-lg hover:shadow-xl uppercase tracking-wider">
+                    <a href="https://redtickets.uy/evento/PFW-presenta-Universo-Troisgros/26239/" target="_blank" rel="noopener noreferrer" className="block w-full text-center bg-primary hover:bg-black text-white font-bold py-4 rounded-xl transition-all mb-8 shadow-lg hover:shadow-xl uppercase tracking-wider">
                         Comprar Ahora
-                    </button>
+                    </a>
 
                     <div className="text-left space-y-4">
                         {[

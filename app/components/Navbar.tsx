@@ -51,9 +51,9 @@ export default function Navbar({ variant = "transparent" }: NavbarProps) {
                     <a href="#" className={`hidden md:block ${textColorClass}/80 ${hoverTextColorClass} text-sm uppercase tracking-wider transition-colors`}>
                         Contacto
                     </a>
-                    <button className="bg-primary hover:bg-[#965764] text-white text-xs font-bold py-2 px-6 rounded-full uppercase tracking-widest transition-all">
+                    <a href="https://redtickets.uy/evento/PFW-presenta-Universo-Troisgros/26239/" target="_blank" rel="noopener noreferrer" className="bg-primary hover:bg-[#965764] text-white text-xs font-bold py-2 px-6 rounded-full uppercase tracking-widest transition-all">
                         Comprar
-                    </button>
+                    </a>
                 </div>
             </div>
         </nav>

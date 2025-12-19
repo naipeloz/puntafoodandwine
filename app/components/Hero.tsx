@@ -109,9 +109,9 @@ export default function Hero() {
                         Universo <br /> Troisgros
                     </h1>
                     <div className="flex flex-col md:flex-row gap-4 mt-8">
-                        <button className="bg-primary hover:bg-[#965764] text-white font-bold py-3 px-8 rounded-full transition-all duration-300 uppercase tracking-wider text-sm shadow-lg transform hover:scale-105 border border-primary">
+                        <a href="https://redtickets.uy/evento/PFW-presenta-Universo-Troisgros/26239/" target="_blank" rel="noopener noreferrer" className="bg-primary hover:bg-[#965764] text-white font-bold py-3 px-8 rounded-full transition-all duration-300 uppercase tracking-wider text-sm shadow-lg transform hover:scale-105 border border-primary text-center">
                             Comprar Entradas
-                        </button>
+                        </a>
                         <button className="border border-white hover:bg-primary hover:border-primary hover:text-white text-white font-bold py-3 px-8 rounded-full transition-all duration-300 uppercase tracking-wider text-sm shadow-sm backdrop-blur-sm bg-black/10">
                             Más Información
                         </button>
