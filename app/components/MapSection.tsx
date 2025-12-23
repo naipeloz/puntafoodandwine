@@ -20,8 +20,8 @@ export default function MapSection() {
             <div className="max-w-6xl mx-auto animate-fade-in-up">
 
                 {/* Form / Contact */}
-                <div className="w-full max-w-4xl mx-auto bg-[#B67784] rounded-3xl p-10 md:p-16 text-white shadow-2xl flex flex-col justify-center min-h-[400px]">
-                    <h3 className="font-display text-4xl md:text-5xl mb-4 uppercase tracking-wide text-center">Contacto</h3>
+                <div id="contact" className="w-full max-w-4xl mx-auto bg-[#B67784] rounded-3xl p-8 md:p-10 text-white shadow-2xl flex flex-col justify-center scroll-mt-24">
+                    <h3 className="font-display text-4xl md:text-5xl mb-2 uppercase tracking-wide text-center">Contacto</h3>
                     <p className="mb-8 text-white/90 font-light text-base leading-relaxed text-center max-w-2xl mx-auto">
                         SUSCRÍBETE PARA RECIBIR NOVEDADES Y ACCESO EXCLUSIVO A LA PREVENTA DE ENTRADAS.
                     </p>
@@ -60,7 +60,7 @@ export default function MapSection() {
                     )}
 
                     <p className="mt-8 text-xs text-white/60 text-center uppercase tracking-widest">
-                        Punta Food & Wine 2025
+                        Punta del Este Food & Wine 2025
                     </p>
                 </div>
             </div>

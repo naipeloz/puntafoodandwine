@@ -7,6 +7,7 @@ import TicketsSection from "./components/TicketsSection";
 import RecapSection from "./components/RecapSection"; // NEW
 import MapSection from "./components/MapSection";
 import SponsorsSection from "./components/SponsorsSection";
+import NewsletterSection from "./components/NewsletterSection"; // NEW
 import Footer from "./components/Footer";
 
 
@@ -16,17 +17,19 @@ export default function Home() {
       <Navbar />
       <Hero />
       <ImaginateSection /> {/* Replaces InfoSection */}
-      <StationsSection /> {/* NEW */}
+      {/* NEW <StationsSection /> */}
 
       {/* Tickets might need an ID for the navbar link */}
       <div id="tickets">
         <TicketsSection />
       </div>
-
+      <NewsletterSection />
       <RecapSection /> {/* New Recap replacing Stats, placed below tickets */}
-
-      <MapSection />
       <SponsorsSection />
+      <NewsletterSection />
+      <MapSection />
+      <NewsletterSection />
+
       <Footer />
     </main>
   );

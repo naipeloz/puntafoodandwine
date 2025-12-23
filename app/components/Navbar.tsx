@@ -32,9 +32,9 @@ export default function Navbar({ variant = "transparent" }: NavbarProps) {
                 <div className="hidden md:block">
                     <a href="/">
                         <img
-                            src="/assets/logos_pfw/horizontal-black.png"
-                            alt="Punta Food & Wine"
-                            className={`h-8 md:h-10 w-auto object-contain transition-all duration-300 ${!(isScrolled || isLightVariant) ? "brightness-0 invert" : ""}`}
+                            src={(isScrolled || isLightVariant) ? "/assets/logos_pfw/horizontal-black.png" : "/assets/sponsors/itau/logo_half.png"}
+                            alt="Punta del Este Food & Wine"
+                            className={`h-8 md:h-10 w-auto object-contain transition-all duration-300`}
                         />
                     </a>
                 </div>
@@ -44,16 +44,16 @@ export default function Navbar({ variant = "transparent" }: NavbarProps) {
                     <a href="/" className={`hidden md:block ${textColorClass}/80 ${hoverTextColorClass} text-sm uppercase tracking-wider transition-colors`}>
                         Inicio
                     </a>
-                    <a href="/el-evento" className={`hidden md:block ${textColorClass}/80 ${hoverTextColorClass} text-sm uppercase tracking-wider transition-colors`}>
-                        El Evento
+                    <a href="/universo-troisgros" className={`hidden md:block ${textColorClass}/80 ${hoverTextColorClass} text-sm uppercase tracking-wider transition-colors`}>
+                        Universo Troisgros
                     </a>
                     <a href="/#tickets" className={`hidden md:block ${textColorClass}/80 ${hoverTextColorClass} text-sm uppercase tracking-wider transition-colors`}>
                         Entradas
                     </a>
-                    <a href="#" className={`hidden md:block ${textColorClass}/80 ${hoverTextColorClass} text-sm uppercase tracking-wider transition-colors`}>
+                    <a href="/#contact" className={`hidden md:block ${textColorClass}/80 ${hoverTextColorClass} text-sm uppercase tracking-wider transition-colors`}>
                         Contacto
                     </a>
-                    <a href="https://redtickets.uy/evento/PFW-presenta-Universo-Troisgros/26239/" target="_blank" rel="noopener noreferrer" className="bg-primary hover:bg-[#965764] text-white text-xs font-bold py-2 px-6 rounded-full uppercase tracking-widest transition-all">
+                    <a href="https://redtickets.uy/evento/PFW-presenta-Universo-Troisgros/26239/" target="_blank" rel="noopener noreferrer" className="bg-primary hover:bg-[#965764] text-white text-xs font-bold py-2 px-10 rounded-full uppercase tracking-widest transition-all">
                         Comprar
                     </a>
                 </div>

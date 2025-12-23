@@ -17,7 +17,7 @@ export default function ImaginateSection() {
                         Thomas Troisgros —Chef del Año 2025, estrella Michelin y cuarta generación de una de las grandes familias de la gastronomía mundial— llega desde Río a La Susana para presentar, por primera vez, un recorrido por sus cuatro restaurantes icónicos: Oseille, Toto Ipanema, C.T. Boucherie y Tijolada junto a vinos de alta gama, tragos de autor y DJ en vivo.
                     </p>
                     <p className="font-medium text-black/80">
-                        El evento gastronómico del verano se llama Universo Troisgros.
+                        El evento gastronómico del verano se llama UNIVERSO TROISGROS.
                     </p>
                 </div> */}
             </div>

@@ -13,9 +13,6 @@ export default function EventSubmenu() {
                 <Link href="#estaciones" className="text-xs uppercase tracking-widest font-bold text-black/60 hover:text-primary transition-colors whitespace-nowrap">
                     Estaciones
                 </Link>
-                <Link href="#itinerario" className="text-xs uppercase tracking-widest font-bold text-black/60 hover:text-primary transition-colors whitespace-nowrap">
-                    Itinerario
-                </Link>
                 <Link href="#entradas" className="text-xs uppercase tracking-widest font-bold text-black/60 hover:text-primary transition-colors whitespace-nowrap">
                     Entradas
                 </Link>

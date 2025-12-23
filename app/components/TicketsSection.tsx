@@ -2,16 +2,16 @@ export default function TicketsSection() {
     return (
         <section className="bg-white py-24 px-4">
             <div className="max-w-2xl mx-auto text-center">
-                <h2 className="font-display text-4xl text-black mb-4 uppercase">Entradas</h2>
+                <h2 className="font-display text-4xl text-black mb-4 uppercase">Entrada</h2>
                 <p className="text-black/60 mb-12 font-light">
-                    Un evento único. Cupos limitados.
+                    {/* TODO: Add description */}
                 </p>
 
                 <div className="relative bg-white border border-primary/20 rounded-2xl p-8 shadow-xl overflow-hidden group hover:border-primary/50 transition-colors duration-300">
                     <div className="absolute top-0 left-0 w-full h-2 bg-primary"></div>
 
-                    <div className="mb-2 text-primary font-bold tracking-widest uppercase text-xs">Punta Food & Wine Presenta</div>
-                    <h3 className="font-display text-3xl text-black mb-4">Universo Troisgros</h3>
+                    <div className="mb-2 text-primary font-bold tracking-widest uppercase text-xs">Punta del Este Food & Wine Presenta</div>
+                    <h3 className="font-display text-3xl text-black mb-4">UNIVERSO TROISGROS</h3>
 
                     <div className="text-primary text-6xl font-bold font-display mb-2">
                         US$180

@@ -6,6 +6,25 @@ export default function RecapSection() {
     const videoRef = useRef<HTMLIFrameElement>(null);
     const [isInteractive, setIsInteractive] = useState(false);
 
+    const [isPlaying, setIsPlaying] = useState(true);
+
+    const togglePlay = () => {
+        if (!videoRef.current) return;
+
+        const action = isPlaying ? 'pauseVideo' : 'playVideo';
+        videoRef.current.contentWindow?.postMessage(`{"event":"command","func":"${action}","args":""}`, '*');
+        setIsPlaying(!isPlaying);
+    };
+
+    // Reset state when closing interactive mode
+    useEffect(() => {
+        if (!isInteractive && videoRef.current) {
+            // Ensure video plays when resetting
+            setIsPlaying(true);
+            videoRef.current.contentWindow?.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
+        }
+    }, [isInteractive]);
+
     return (
         <section className="relative w-full py-20 overflow-hidden flex items-center justify-center text-white bg-black min-h-[80vh]">
 
@@ -14,8 +33,8 @@ export default function RecapSection() {
                 <iframe
                     ref={videoRef}
                     className="w-full h-full scale-[1.35] pointer-events-none select-none pb[56.25%]"
-                    src={`https://www.youtube.com/embed/yKuPtD0thLU?autoplay=1&mute=${isInteractive ? 0 : 1}&controls=0&loop=1&playlist=yKuPtD0thLU&playsinline=1&showinfo=0&rel=0`}
-                    title="Recap Video"
+                    src={`https://www.youtube.com/embed/yKuPtD0thLU?autoplay=1&mute=${isInteractive ? 0 : 1}&controls=0&loop=1&playlist=yKuPtD0thLU&playsinline=1&showinfo=0&rel=0&enablejsapi=1`}
+                    title="REVIVÍ LA EDICIÓN 2025"
                     allow="autoplay; encrypted-media"
                     allowFullScreen
                     style={{ border: 'none' }}
@@ -24,23 +43,45 @@ export default function RecapSection() {
                 <div className={`absolute inset-0 bg-black/50 z-10 transition-opacity duration-1000 ${isInteractive ? 'opacity-0' : 'opacity-100'}`} />
             </div>
 
-            {/* Toggle Button (Close/Reset) - Only visible when interactive */}
-            <button
-                onClick={() => setIsInteractive(false)}
-                className={`absolute top-8 right-8 z-50 text-white bg-black/20 backdrop-blur-md rounded-full p-4 hover:bg-black/40 transition-all duration-500 ${isInteractive ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4 pointer-events-none'}`}
-            >
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
-                </svg>
-            </button>
+            {/* Controls Container - Only visible when interactive */}
+            <div className={`absolute top-8 right-8 z-50 flex items-center gap-4 transition-all duration-500 ${isInteractive ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4 pointer-events-none'}`}>
+
+                {/* Play/Pause Button */}
+                <button
+                    onClick={togglePlay}
+                    className="text-white bg-black/20 backdrop-blur-md rounded-full p-4 hover:bg-black/40 transition-all duration-300"
+                >
+                    {isPlaying ? (
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 5.25v13.5m-7.5-13.5v13.5" />
+                        </svg>
+                    ) : (
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.348a1.125 1.125 0 010 1.971l-11.54 6.347a1.125 1.125 0 01-1.667-.985V5.653z" />
+                        </svg>
+                    )}
+                </button>
+
+                {/* Close Button */}
+                <button
+                    onClick={() => setIsInteractive(false)}
+                    className="text-white bg-black/20 backdrop-blur-md rounded-full p-4 hover:bg-black/40 transition-all duration-300"
+                >
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
 
 
             {/* Content Container - Fades out when interactive */}
             <div className={`relative z-20 max-w-6xl mx-auto px-6 flex flex-col items-center text-center transition-all duration-700 ${isInteractive ? 'opacity-0 translate-y-10 pointer-events-none' : 'opacity-100 translate-y-0'}`}>
 
-                <h2 className="font-display text-5xl md:text-7xl text-white mb-8 tracking-wider uppercase drop-shadow-lg">
-                    Recap 2025
-                </h2>
+                <img
+                    src="/assets/recap_text.png"
+                    alt="REVIVÍ LA EDICIÓN 2025"
+                    className="w-full max-w-lg md:max-w-4xl h-auto object-contain mb-12 drop-shadow-lg"
+                />
 
                 {/* Play Button */}
                 <button

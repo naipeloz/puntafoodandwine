@@ -25,7 +25,7 @@ const sansFont = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Universo Troisgros | Punta Food & Wine 2025",
+  title: "UNIVERSO TROISGROS | Punta del Este Food & Wine 2025",
   description: "Frente al océano, cuando cae el sol, te espera la magia. Thomas Troisgros llega desde Río a La Susana para presentar Universo Troisgros. Una experiencia gastronómica única.",
   keywords: ["Punta del Este", "Food & Wine", "Universo Troisgros", "Thomas Troisgros", "La Susana", "José Ignacio", "Oseille", "Toto Ipanema", "CT Boucherie", "Tijolada", "Eventos Uruguay 2025"],
   icons: {
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     ],
   },
   openGraph: {
-    title: "Universo Troisgros | Punta Food & Wine 2025",
+    title: "UNIVERSO TROISGROS | Punta del Este Food & Wine 2025",
     description: "Frente al océano, cuando cae el sol, te espera la magia. Thomas Troisgros llega a La Susana.",
     url: "https://puntafoodandwine.com",
     siteName: "Punta Food & Wine",
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
         url: 'https://puntafoodandwine.com/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Universo Troisgros',
+        alt: 'UNIVERSO TROISGROS',
       },
     ],
   },
@@ -73,7 +73,7 @@ export default function RootLayout({
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Event",
-    "name": "Universo Troisgros - Punta Food & Wine",
+    "name": "UNIVERSO TROISGROS - PUNTA DEL ESTE FOOD & WINE",
     "startDate": "2025-02-05T18:00",
     "endDate": "2025-02-06T00:00",
     "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
@@ -97,7 +97,7 @@ export default function RootLayout({
     },
     "organizer": {
       "@type": "Organization",
-      "name": "Punta Food & Wine"
+      "name": "Punta del Este Food & Wine"
     }
   };
 

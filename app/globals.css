@@ -37,6 +37,11 @@ body {
   overflow-x: hidden;
 }
 
+strong, b {
+  font-weight: 700;
+  color: #000000; /* Ensure bold text is fully black/opaque to stand out against black/70 text */
+}
+
 @layer utilities {
   .animate-fade-in-up {
     animation: fadeInUp 0.8s ease-out forwards;

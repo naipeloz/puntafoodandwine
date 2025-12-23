@@ -6,7 +6,7 @@ export default function Footer() {
                 {/* Logo / Brand */}
                 <div>
                     <h2 className="font-display text-2xl uppercase tracking-widest text-primary mb-1">
-                        Punta Food & Wine
+                        Punta del Este Food & Wine
                     </h2>
                     <p className="text-xs text-white/40 uppercase tracking-wider">© 2025 Todos los derechos reservados.</p>
                 </div>
