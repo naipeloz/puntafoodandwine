@@ -1,6 +1,6 @@
 export default function TicketsSection() {
     return (
-        <section className="bg-white py-24 px-4">
+        <section className="bg-secondary py-24 px-4">
             <div className="max-w-2xl mx-auto text-center">
                 <h2 className="font-display text-4xl text-black mb-4 uppercase">Entrada</h2>
                 <p className="text-black/60 mb-12 font-light">

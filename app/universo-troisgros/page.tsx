@@ -18,16 +18,19 @@ export default function ElEvento() {
             <ImaginateSection />
             <div className="max-w-6xl mx-auto px-6 text-black/70 font-light text-lg space-y-6">
                 <p>
-                    Imagínate llegar a La Susana, frente al océano, cuando la música empieza a marcar la bajada del día.
+                    Imaginate llegar a La Susana, frente al océano.
                 </p>
                 <p>
-                    Allí te recibirá el Chef <strong>Thomas Troisgros</strong>, para una degustación de los mejores platos de sus restaurantes icónicos <strong>Oseille</strong>, <strong>Toto Ipanema</strong>, <strong>C.T. Boucherie</strong> y <strong>Tijolada ofrecidos a lo largo de cuatro estaciones que conforman un universo propio</strong>. Distinguido como <strong>Chef del Año 2025 por VEJA Rio</strong>, con <strong>estrella Michelin</strong> y reconocido por <strong>The Best Chef Awards</strong> y <strong>Man of the Year 2025 por GQ Brasil</strong>, Thomas es una figura central de la cocina carioca
+                    Entre vinos seleccionados y tragos de autor, nuestro DJ te va llevando hacia la puesta del sol, cuando te recibirá el Chef <strong>Thomas Troisgros</strong>, para degustar los mejores platos de sus restaurantes icónicos: <strong>Oseille</strong>, <strong>Toto Ipanema</strong>, <strong>C.T. Boucherie</strong> y <strong>Tijolada</strong>.
                 </p>
                 <p>
-                    Junto a él Santiago <strong>Inzaurralde, el Chef anfitrión comandará</strong> otras <strong>dos estaciones</strong>, con platos únicos creados para esta experiencia inmersiva, donde cada estación es un viaje, y cada plato cuenta una historia.
+                    <strong>A lo largo de cuatro estaciones gastronómicas vas a recorrer el universo de este Chef</strong> central de la cocina carioca, distinguido como <strong>Chef del Año 2025 por VEJA Rio</strong>, con <strong>estrella Michelin</strong> y reconocido por <strong>The Best Chef Awards</strong> y <strong>Man of the Year 2025 por GQ Brasil</strong>,
                 </p>
                 <p>
-                    Vinos de alta gama, tragos de autor y DJ en vivo completan un atardecer y cena que van a marcar tu verano 2026.
+                    Junto a él Santiago <strong>Inzaurralde, Chef Ejecutivo de La Susana - Vik José Ignacio</strong> te espera en otras <strong>dos estaciones</strong>, con creaciones únicas.
+                </p>
+                <p>
+                    Una experiencia inmersiva, donde cada estación es un viaje, y cada plato cuenta una historia que <strong>marcarán</strong> tu verano 2026.
                 </p>
             </div>
             <ChefsSection />
