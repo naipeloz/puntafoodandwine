@@ -62,8 +62,8 @@ export default function ElEvento() {
                         LAS ESTACIONES
                     </h1>
                     <p className="max-w-2xl mx-auto text-black/70 font-light text-lg">
-                        Explora las 6 estaciones gastronómicas que conforman esta experiencia única.
-                        Haz clic en cada estación para descubrir más detalles.
+                        Explorá las 6 estaciones gastronómicas que conforman esta experiencia única.
+                        Hacé clic en cada estación para descubrir más detalles.
                     </p>
                 </section>
 

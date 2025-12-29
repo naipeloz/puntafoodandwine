@@ -14,7 +14,7 @@ export default function EventSubmenu() {
                     Estaciones
                 </Link>
                 <Link href="#entradas" className="text-xs uppercase tracking-widest font-bold text-black/60 hover:text-primary transition-colors whitespace-nowrap">
-                    Entradas
+                    Tickets
                 </Link>
             </div>
         </div>

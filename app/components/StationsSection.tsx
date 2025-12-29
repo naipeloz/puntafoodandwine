@@ -48,7 +48,7 @@ export default function StationsSection({ disableHeader = false }: { disableHead
                 {!disableHeader && (
                     <div className="text-center mb-16">
                         <h2 className="font-display text-4xl md:text-5xl text-black uppercase mb-4">Experiencias</h2>
-                        <p className="text-black/60 font-light max-w-xl mx-auto">Descubre las diferentes estaciones que hemos preparado para ti.</p>
+                        <p className="text-black/60 font-light max-w-xl mx-auto">Descubrí las diferentes estaciones que hemos preparado para ti.</p>
                     </div>
                 )}
 

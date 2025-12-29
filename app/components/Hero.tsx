@@ -119,7 +119,7 @@ export default function Hero() {
 
             {/* Decorative arrow/scroller */}
             <div className="absolute bottom-8 animate-bounce flex flex-col items-center gap-2 opacity-80 z-20">
-                <span className="text-[10px] uppercase tracking-widest text-white drop-shadow-sm">Descubre Más</span>
+                <span className="text-[10px] uppercase tracking-widest text-white drop-shadow-sm">Descubrí Más</span>
                 <svg className="w-5 h-5 text-white drop-shadow-sm" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
                 </svg>

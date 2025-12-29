@@ -43,7 +43,7 @@ export default function MapSection() {
                 <div id="contact" className="w-full max-w-4xl mx-auto bg-[#B67784] rounded-3xl p-8 md:p-10 text-white shadow-2xl flex flex-col justify-center scroll-mt-24">
                     <h3 className="font-display text-4xl md:text-5xl mb-2 uppercase tracking-wide text-center">Contacto</h3>
                     <p className="mb-8 text-white/90 font-light text-base leading-relaxed text-center max-w-2xl mx-auto">
-                        SUSCRÍBETE PARA RECIBIR NOVEDADES Y ACCESO EXCLUSIVO A LA PREVENTA DE TICKETS.
+                        SUSCRIBÍTE PARA RECIBIR NOVEDADES Y ACCESO EXCLUSIVO A LA PREVENTA DE TICKETS.
                     </p>
 
                     {status === "success" ? (
