@@ -10,6 +10,21 @@ import ImaginateSection from "../components/ImaginateSection";
 import StationsSection from "../components/StationsSection";
 import Link from "next/link";
 
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "El Evento - UNIVERSO TROISGROS | PFW 2025",
+    description: "Descubre Universo Troisgros, una experiencia gastronómica única por Thomas Troisgros y Santiago Inzaurralde en La Susana. Vinos de alta gama, tragos de autor y DJ en vivo.",
+    openGraph: {
+        title: "El Evento - UNIVERSO TROISGROS | PFW 2025",
+        description: "Descubre Universo Troisgros, una experiencia gastronómica única por Thomas Troisgros y Santiago Inzaurralde en La Susana.",
+        url: "https://puntafoodandwine.com/universo-troisgros",
+        siteName: "Punta Food & Wine",
+        locale: "es_UY",
+        type: "website",
+    },
+};
+
 export default function ElEvento() {
     return (
         <main className="min-h-screen bg-[#F1EFEA] flex flex-col pt-24">
@@ -35,11 +50,10 @@ export default function ElEvento() {
             </div>
             <ChefsSection />
 
-            <PurchaseBanner />
+            {/* <PurchaseBanner /> */}
 
             {/* Stations Section Wrapper */}
-            <section id="estaciones">
-                {/* Header moved here */}
+            {/* <section id="estaciones">
                 <section className="pt-20 pb-12 px-6 text-center">
                     <span className="text-sm uppercase tracking-widest text-black/50 mb-2 block">
                         Experiencia Gastronómica
@@ -53,14 +67,12 @@ export default function ElEvento() {
                     </p>
                 </section>
 
-                {/* Map */}
                 <InteractiveMap />
 
-                {/* <StationsSection disableHeader={true} /> List of Stations (Reused from Home) */}
-            </section>
+            </section> */}
 
             {/* <TimelineSection /> Timeline/Itinerary - Separate Section */}
-            <PurchaseBanner />
+            {/* <PurchaseBanner /> */}
 
             {/* Tickets */}
             <div id="entradas">

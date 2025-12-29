@@ -9,6 +9,7 @@ interface NewsletterModalProps {
 
 export default function NewsletterModal({ isOpen, onClose }: NewsletterModalProps) {
     const [email, setEmail] = useState("");
+    const [name, setName] = useState("");
     const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
 
     if (!isOpen) return null;
@@ -19,16 +20,40 @@ export default function NewsletterModal({ isOpen, onClose }: NewsletterModalProp
 
         setStatus("loading");
 
-        // Simulating API call
-        setTimeout(() => {
+        // Call API
+        try {
+            const response = await fetch('/api/newsletter', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ email, name }),
+            });
+
+            if (!response.ok) {
+                if (response.status === 400) {
+                    // Check if it's already subscribed or other error
+                    const data = await response.json();
+                    if (data.error) throw new Error(data.error);
+                }
+                throw new Error('Subscription failed');
+            }
+
             setStatus("success");
             // Reset after showing success message
             setTimeout(() => {
                 onClose();
                 setStatus("idle");
                 setEmail("");
-            }, 2000);
-        }, 1000);
+                setName("");
+            }, 3000);
+
+        } catch (error) {
+            console.error(error);
+            setStatus("error");
+            // Optionally set status back to idle or show error message
+            setTimeout(() => setStatus("idle"), 3000);
+        }
     };
 
     return (
@@ -68,6 +93,14 @@ export default function NewsletterModal({ isOpen, onClose }: NewsletterModalProp
                         </p>
 
                         <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+                            <input
+                                type="text"
+                                placeholder="Nombre"
+                                className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg text-black focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all"
+                                value={name}
+                                onChange={(e) => setName(e.target.value)}
+                                required
+                            />
                             <input
                                 type="email"
                                 placeholder="tu@email.com"

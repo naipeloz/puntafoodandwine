@@ -5,14 +5,34 @@ import { useState } from "react";
 export default function MapSection() {
     const [status, setStatus] = useState<"idle" | "submitting" | "success">("idle");
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
+        const form = e.target as HTMLFormElement;
+        const name = (form.elements.namedItem('name') as HTMLInputElement).value;
+        const email = (form.elements.namedItem('email') as HTMLInputElement).value;
+
         setStatus("submitting");
-        // Simulate API call
-        setTimeout(() => {
+
+        try {
+            const response = await fetch('/api/newsletter', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ email, name }),
+            });
+
+            if (!response.ok) {
+                throw new Error('Submission failed');
+            }
+
             setStatus("success");
-            // Reset after a while if needed
-        }, 1500);
+            form.reset();
+        } catch (error) {
+            console.error(error);
+            // setStatus("error"); // Add error state if needed, or just stay on submitting/reset
+            setStatus("idle"); // reset for retry
+        }
     };
 
     return (
@@ -23,7 +43,7 @@ export default function MapSection() {
                 <div id="contact" className="w-full max-w-4xl mx-auto bg-[#B67784] rounded-3xl p-8 md:p-10 text-white shadow-2xl flex flex-col justify-center scroll-mt-24">
                     <h3 className="font-display text-4xl md:text-5xl mb-2 uppercase tracking-wide text-center">Contacto</h3>
                     <p className="mb-8 text-white/90 font-light text-base leading-relaxed text-center max-w-2xl mx-auto">
-                        SUSCRÍBETE PARA RECIBIR NOVEDADES Y ACCESO EXCLUSIVO A LA PREVENTA DE ENTRADAS.
+                        SUSCRÍBETE PARA RECIBIR NOVEDADES Y ACCESO EXCLUSIVO A LA PREVENTA DE TICKETS.
                     </p>
 
                     {status === "success" ? (
@@ -40,12 +60,14 @@ export default function MapSection() {
                         <form className="space-y-6 max-w-xl mx-auto w-full" onSubmit={handleSubmit}>
                             <input
                                 required
+                                name="name"
                                 type="text"
                                 placeholder="Nombre"
                                 className="w-full px-8 py-5 rounded-full bg-white text-primary placeholder-primary/50 focus:outline-none focus:ring-4 focus:ring-white/30 transition-all shadow-lg text-lg"
                             />
                             <input
                                 required
+                                name="email"
                                 type="email"
                                 placeholder="Email"
                                 className="w-full px-8 py-5 rounded-full bg-white text-primary placeholder-primary/50 focus:outline-none focus:ring-4 focus:ring-white/30 transition-all shadow-lg text-lg"

@@ -34,10 +34,10 @@ export default function ChefsSection() {
 
                 <div className="flex flex-col gap-0">
                     {CHEFS.map((chef, idx) => (
-                        <div key={idx} className={`flex flex-col md:flex-row h-[500px] w-full overflow-hidden group border-b border-black/5 last:border-none ${idx % 2 !== 0 ? 'md:flex-row-reverse' : ''}`}>
+                        <div key={idx} className={`flex flex-col md:flex-row h-auto md:h-[500px] w-full overflow-hidden group border-b border-black/5 last:border-none ${idx % 2 !== 0 ? 'md:flex-row-reverse' : ''}`}>
 
                             {/* Image Container */}
-                            <div className="w-full md:w-1/2 relative overflow-hidden bg-black/5">
+                            <div className="w-full md:w-1/2 h-[300px] md:h-full relative overflow-hidden bg-black/5">
                                 <div
                                     className="absolute inset-0 bg-cover bg-center transition-all duration-700 grayscale group-hover:grayscale-0 group-hover:scale-110"
                                     style={{ backgroundImage: `url('${chef.image}')` }}

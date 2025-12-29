@@ -25,9 +25,9 @@ const sansFont = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "UNIVERSO TROISGROS | Punta del Este Food & Wine 2025",
-  description: "Frente al océano, cuando cae el sol, te espera la magia. Thomas Troisgros llega desde Río a La Susana para presentar Universo Troisgros. Una experiencia gastronómica única.",
-  keywords: ["Punta del Este", "Food & Wine", "Universo Troisgros", "Thomas Troisgros", "La Susana", "José Ignacio", "Oseille", "Toto Ipanema", "CT Boucherie", "Tijolada", "Eventos Uruguay 2025"],
+  title: "Punta del Este Food & Wine",
+  description: "El festival gastronómico más exclusivo de América.",
+  keywords: ["Punta del Este", "Food & Wine", "Festival Gastronómico", "Eventos Uruguay", "Gastronomía"],
   icons: {
     icon: [
       { url: '/assets/favicon/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
@@ -44,8 +44,8 @@ export const metadata: Metadata = {
     ],
   },
   openGraph: {
-    title: "UNIVERSO TROISGROS | Punta del Este Food & Wine 2025",
-    description: "Frente al océano, cuando cae el sol, te espera la magia. Thomas Troisgros llega a La Susana.",
+    title: "Punta del Este Food & Wine",
+    description: "El festival gastronómico más exclusivo de América.",
     url: "https://puntafoodandwine.com",
     siteName: "Punta Food & Wine",
     locale: "es_UY",
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
         url: 'https://puntafoodandwine.com/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'UNIVERSO TROISGROS',
+        alt: 'Punta del Este Food & Wine',
       },
     ],
   },
