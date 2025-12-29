@@ -39,7 +39,7 @@ export default function SponsorsSection() {
                 <div className="w-full">
                     <span className="text-[10px] uppercase tracking-[0.2em] text-[#B67784] block mb-6">Medical Partners</span>
                     <div className="flex flex-wrap justify-center items-center gap-8 opacity-80">
-                        <img src="/assets/sponsors/bluecross/logo_vertical.png" alt="Blue Cross" className="h-24 object-contain invert brightness-0" />
+                        <img src="/assets/sponsors/bluecross/logo_vertical_white.png" alt="Blue Cross" className="h-24 object-contain" />
                     </div>
                 </div>
 
@@ -49,7 +49,7 @@ export default function SponsorsSection() {
                     <div className="flex flex-wrap justify-center items-center gap-8 opacity-80">
                         <img src="/assets/sponsors/aeropuerto/logo.png" alt="Aeropuerto" className="h-24 object-contain invert brightness-0" />
                         <img src="/assets/sponsors/black_river/logo_white.png" alt="Black River" className="h-24 object-contain" />
-                        <img src="/assets/sponsors/mar_austral/logo.png" alt="Mar Austral" className="h-24 object-contain invert" />
+                        <img src="/assets/sponsors/mar_austral/logo_white.png" alt="Mar Austral" className="h-24 object-contain" />
                     </div>
                 </div>
 
