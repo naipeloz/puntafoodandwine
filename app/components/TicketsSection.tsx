@@ -18,24 +18,41 @@ export default function TicketsSection() {
                     </div>
                     <p className="text-black/40 text-sm mb-6">por persona</p>
 
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8 text-center md:text-left">
+                        {/* Event Info */}
+                        <div className="space-y-4">
+                            <div className="flex items-center md:items-start justify-center md:justify-start text-black/70 flex-col md:flex-row gap-1 md:gap-0">
+                                <span className="font-bold md:mr-2 text-primary">Lugar:</span>
+                                <span className="font-light">La Susana - VIK, José Ignacio</span>
+                            </div>
+                            <div className="flex items-center md:items-start justify-center md:justify-start text-black/70 flex-col md:flex-row gap-1 md:gap-0">
+                                <span className="font-bold md:mr-2 text-primary">Fecha:</span>
+                                <span className="font-light">5 y 6 de febrero | 19:30 Hs.</span>
+                            </div>
+                            <div className="flex items-center md:items-start justify-center md:justify-start text-black/70 flex-col md:flex-row gap-1 md:gap-0">
+                                <span className="font-bold md:mr-2 text-primary">Dress Code:</span>
+                                <span className="font-light">Casual</span>
+                            </div>
+                        </div>
+
+                        {/* Includes */}
+                        <div className="space-y-1 text-center md:text-left">
+                            <p className="font-bold text-primary mb-2">Incluye</p>
+                            <p className="text-sm text-black/60 font-light">Degustación libre</p>
+                            <p className="text-sm text-black/60 font-light">Todos los platos de los Chefs</p>
+                            <p className="text-sm text-black/60 font-light">Vinos seleccionados</p>
+                            <p className="text-sm text-black/60 font-light">Tragos de autor</p>
+                            <p className="text-sm text-black/60 font-light">Bebidas sin alcohol</p>
+                            <p className="text-sm text-black/60 font-light">Postres</p>
+                            <p className="text-sm text-black/60 font-light">Café</p>
+                        </div>
+                    </div>
+
                     <a href="https://redtickets.uy/evento/PFW-presenta-Universo-Troisgros/26239/" target="_blank" rel="noopener noreferrer" className="block w-full text-center bg-primary hover:bg-black text-white font-bold py-4 rounded-xl transition-all mb-8 shadow-lg hover:shadow-xl uppercase tracking-wider">
                         Comprar Ahora
                     </a>
 
-                    <div className="text-left space-y-4 mb-8">
-                        <div className="flex items-start text-black/70">
-                            <span className="font-bold mr-2 text-primary">Lugar:</span>
-                            <span className="font-light">La Susana - VIK, José Ignacio</span>
-                        </div>
-                        <div className="flex items-start text-black/70">
-                            <span className="font-bold mr-2 text-primary">Fecha:</span>
-                            <span className="font-light">5 y 6 de febrero | 18 a 00Hs.</span>
-                        </div>
-                        <div className="flex items-start text-black/70">
-                            <span className="font-bold mr-2 text-primary">Dress Code:</span>
-                            <span className="font-light">Casual</span>
-                        </div>
-                    </div>
+
 
                     {/* Itau Discount */}
                     <div className="border-t border-dashed border-primary/20 pt-6 mt-6">

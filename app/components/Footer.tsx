@@ -13,8 +13,7 @@ export default function Footer() {
 
                 {/* Links */}
                 <div className="flex gap-6 text-xs uppercase tracking-widest font-light text-white/70">
-                    <a href="#" className="hover:text-primary transition-colors">Instagram</a>
-                    <a href="#" className="hover:text-primary transition-colors">Facebook</a>
+                    <a href="https://www.instagram.com/puntafoodandwine/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Instagram</a>
                     <a href="#" className="hover:text-primary transition-colors">Contacto</a>
                     <a href="#" className="hover:text-primary transition-colors">Prensa</a>
                 </div>

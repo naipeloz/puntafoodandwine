@@ -33,19 +33,16 @@ export default function ElEvento() {
             <ImaginateSection />
             <div className="max-w-6xl mx-auto px-6 text-black/70 font-light text-lg space-y-6">
                 <p>
-                    Imaginate llegar a La Susana, frente al océano.
+                    En el entorno único de La Susana, frente al océano, te esperamos al atardecer con vinos seleccionados, tragos de autor y una banda sonora creada por nuestro DJ en vivo.
                 </p>
                 <p>
-                    Entre vinos seleccionados y tragos de autor, nuestro DJ te va llevando hacia la puesta del sol, cuando te recibirá el Chef <strong>Thomas Troisgros</strong>, para degustar los mejores platos de sus restaurantes icónicos: <strong>Oseille</strong>, <strong>Toto Ipanema</strong>, <strong>C.T. Boucherie</strong> y <strong>Tijolada</strong>.
+                    Allí te recibirá el <strong>Chef Thomas Troisgros</strong> para presentarte lo mejor de sus restaurantes icónicos <strong>Oseille</strong>, <strong>Toto Ipanema</strong>, <strong>C.T. Boucherie</strong> y <strong>Tijolada</strong>. <strong>Cuatro estaciones gastronómicas que recorren el universo de este referente de la cocina carioca</strong> — <strong>Chef del Año 2025 por Veja Rio</strong>, estrella <strong>Michelin</strong>, reconocido por <strong>The Best Chef Awards</strong> y <strong>Man of the Year 2025 por GQ Brasil</strong>.
                 </p>
                 <p>
-                    <strong>A lo largo de cuatro estaciones gastronómicas vas a recorrer el universo de este Chef</strong> central de la cocina carioca, distinguido como <strong>Chef del Año 2025 por VEJA Rio</strong>, con <strong>estrella Michelin</strong> y reconocido por <strong>The Best Chef Awards</strong> y <strong>Man of the Year 2025 por GQ Brasil</strong>,
+                    Junto a él, <strong>Santiago Inzaurralde</strong>, Chef Ejecutivo de La Susana - Vik José Ignacio, <strong>sumara otras dos estaciones con creaciones propias</strong> de este <strong>restaurant</strong> referente de José Ignacio y Punta del Este.
                 </p>
                 <p>
-                    Junto a él Santiago <strong>Inzaurralde, Chef Ejecutivo de La Susana - Vik José Ignacio</strong> te espera en otras <strong>dos estaciones</strong>, con creaciones únicas.
-                </p>
-                <p>
-                    Una experiencia inmersiva, donde cada estación es un viaje, y cada plato cuenta una historia que <strong>marcarán</strong> tu verano 2026.
+                    <strong>Una experiencia inmersiva, donde cada estación es un viaje, y cada plato cuenta una historia que marcará tu verano 2026.</strong>
                 </p>
             </div>
             <ChefsSection />

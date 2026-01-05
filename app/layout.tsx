@@ -1,7 +1,14 @@
 import { SpeedInsights } from "@vercel/speed-insights/next"
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5, // Accessiblity best practice
+  themeColor: "#F1EFEA",
+};
 
 const displayFont = localFont({
   src: "../public/fonts/newake-demo-400.otf",
@@ -74,7 +81,7 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@type": "Event",
     "name": "UNIVERSO TROISGROS - PUNTA DEL ESTE FOOD & WINE",
-    "startDate": "2025-02-05T18:00",
+    "startDate": "2025-02-05T19:30",
     "endDate": "2025-02-06T00:00",
     "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
     "eventStatus": "https://schema.org/EventScheduled",

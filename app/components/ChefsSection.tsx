@@ -13,9 +13,9 @@ const CHEFS = [
     {
         name: "Santiago Inzaurralde",
         subtitle: "Uruguay",
-        image: "/assets/chefs/santiago_placeholder.jpg", // TODO: Replace with actual image
+        image: "/assets/chefs/santiago/img_1.png",
         description: "Chef Ejecutivo de La Susana, Santiago es un maestro del fuego y los productos locales. Su cocina rústica y refinada captura la esencia de José Ignacio como nadie.",
-        link: "https://www.instagram.com/lasusanajoseignacio/" // Linking to La Susana as backup for Santiago if personal not found
+        link: "https://www.instagram.com/lasusanajoseignacio/"
     }
 ];
 
@@ -28,7 +28,7 @@ export default function ChefsSection() {
                         Talento Culinario
                     </span> */}
                     <h2 className="font-display text-4xl md:text-6xl text-black">
-                        CHEFS INVITADOS
+                        NUESTROS CHEFS
                     </h2>
                 </div>
 

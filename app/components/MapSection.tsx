@@ -10,27 +10,29 @@ export default function MapSection() {
         const form = e.target as HTMLFormElement;
         const name = (form.elements.namedItem('name') as HTMLInputElement).value;
         const email = (form.elements.namedItem('email') as HTMLInputElement).value;
+        const subject = (form.elements.namedItem('subject') as HTMLInputElement).value;
 
         setStatus("submitting");
 
         try {
-            const response = await fetch('/api/newsletter', {
+            const response = await fetch('/api/contact', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify({ email, name }),
+                body: JSON.stringify({ email, name, subject }),
             });
 
             if (!response.ok) {
-                throw new Error('Submission failed');
+                const errorData = await response.json();
+                throw new Error(errorData.error || 'Submission failed');
             }
 
             setStatus("success");
             form.reset();
-        } catch (error) {
-            console.error(error);
-            // setStatus("error"); // Add error state if needed, or just stay on submitting/reset
+        } catch (error: any) {
+            console.error('Submission error:', error);
+            alert(`Error al enviar: ${error.message}`); // Verify user sees this
             setStatus("idle"); // reset for retry
         }
     };
@@ -41,9 +43,9 @@ export default function MapSection() {
 
                 {/* Form / Contact */}
                 <div id="contact" className="w-full max-w-4xl mx-auto bg-[#B67784] rounded-3xl p-8 md:p-10 text-white shadow-2xl flex flex-col justify-center scroll-mt-24">
-                    <h3 className="font-display text-4xl md:text-5xl mb-2 uppercase tracking-wide text-center">Contacto</h3>
+                    <h3 className="font-display text-4xl md:text-5xl mb-2 uppercase tracking-wide text-center">Contacto Comercial</h3>
                     <p className="mb-8 text-white/90 font-light text-base leading-relaxed text-center max-w-2xl mx-auto">
-                        SUSCRIBÍTE PARA RECIBIR NOVEDADES Y ACCESO EXCLUSIVO A LA PREVENTA DE TICKETS.
+                        ESCRIBINOS PARA RECIBIR INFORMACIÓN COMERCIAL.
                     </p>
 
                     {status === "success" ? (
@@ -70,6 +72,13 @@ export default function MapSection() {
                                 name="email"
                                 type="email"
                                 placeholder="Email"
+                                className="w-full px-8 py-5 rounded-full bg-white text-primary placeholder-primary/50 focus:outline-none focus:ring-4 focus:ring-white/30 transition-all shadow-lg text-lg"
+                            />
+                            <input
+                                required
+                                name="subject"
+                                type="text"
+                                placeholder="Asunto"
                                 className="w-full px-8 py-5 rounded-full bg-white text-primary placeholder-primary/50 focus:outline-none focus:ring-4 focus:ring-white/30 transition-all shadow-lg text-lg"
                             />
                             <button

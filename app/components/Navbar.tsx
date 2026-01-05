@@ -45,7 +45,11 @@ export default function Navbar({ variant = "transparent" }: NavbarProps) {
 
     return (
         <nav
-            className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled || isMobileMenuOpen ? "bg-white/90 py-4 shadow-md backdrop-blur-md" : "bg-transparent py-6"
+            className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isMobileMenuOpen
+                    ? "bg-[#E6E4DE] py-4"
+                    : isScrolled
+                        ? "bg-white/90 py-4 shadow-md backdrop-blur-md"
+                        : "bg-transparent py-6"
                 }`}
         >
             <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
@@ -54,11 +58,9 @@ export default function Navbar({ variant = "transparent" }: NavbarProps) {
                 <div className="z-50 relative">
                     <a href="/" onClick={() => setIsMobileMenuOpen(false)}>
                         <img
-                            src={"/assets/logos_pfw/horizontal-black.png"} // Always use black logo for light theme Hero
+                            src={isScrolled || isMobileMenuOpen ? "/assets/logos_pfw/horizontal-black.png" : "/assets/logos_pfw/logo.png"}
                             alt="Punta del Este Food & Wine"
-                            className={`h-8 md:h-10 w-auto object-contain transition-all duration-300 ${isScrolled || isMobileMenuOpen ? "opacity-100" : "opacity-0 md:opacity-0"}`}
-                        // Hide logo at top if Hero has text? User ref showed no logo at top.
-                        // Only show on Scroll?
+                            className={`w-auto object-contain transition-all duration-300 opacity-100 ${isScrolled || isMobileMenuOpen ? "h-8 md:h-10" : "h-12 md:h-16"}`}
                         />
                     </a>
                 </div>

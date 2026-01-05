@@ -33,7 +33,7 @@ export default function Hero() {
                 {/* Info Block */}
                 <div className="flex flex-col items-center space-y-1 md:space-y-2 text-black font-bold text-xs md:text-base lg:text-xl uppercase tracking-wide mb-8 md:mb-12">
                     <p>La Susana — Jose Ignacio</p>
-                    <p>19:30 a 00hs. — 5 y 6 de Febrero</p>
+                    <p>19:30 — 5 y 6 de Febrero</p>
                 </div>
 
                 {/* Itau Logo */}
