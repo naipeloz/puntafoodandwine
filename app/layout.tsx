@@ -31,6 +31,11 @@ const sansFont = localFont({
   variable: "--font-actay",
 });
 
+const acuminFont = localFont({
+  src: "../public/fonts/Acumin Variable Concept.ttf",
+  variable: "--font-acumin",
+});
+
 export const metadata: Metadata = {
   title: "Punta del Este Food & Wine",
   description: "El festival gastronómico más exclusivo de América.",
@@ -111,7 +116,7 @@ export default function RootLayout({
   return (
     <html lang="es">
       <body
-        className={`${displayFont.variable} ${sansFont.variable} antialiased font-sans`}
+        className={`${displayFont.variable} ${sansFont.variable} ${acuminFont.variable} antialiased font-sans`}
       >
         <Loader />
         <script

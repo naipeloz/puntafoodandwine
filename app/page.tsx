@@ -46,10 +46,10 @@ export default function Home() {
       {/* Tickets might need an ID for the navbar link */}
       <div id="tickets">
         <TicketsSection />
+        <SponsorsSection />
       </div>
       <NewsletterSection />
       <RecapSection /> {/* New Recap replacing Stats, placed below tickets */}
-      <SponsorsSection />
       <MapSection />
       <NewsletterSection />
 

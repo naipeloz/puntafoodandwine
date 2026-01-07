@@ -4,15 +4,15 @@ import Link from "next/link";
 
 export default function Hero() {
     return (
-        <section className="relative w-full min-h-screen bg-[#E6E4DE] flex flex-col md:flex-row pt-28 md:pt-0">
+        <section className="relative w-full min-h-screen bg-[#E6E4DE] flex flex-col md:flex-row pt-36 md:pt-0">
             {/* Left Column: Text Content */}
-            <div className="w-full md:w-[45%] flex flex-col justify-center items-center text-center px-6 py-8 md:py-0 z-10">
+            <div className="w-full md:w-[45%] flex flex-col justify-center items-center text-center px-4 py-8 md:py-0 z-10">
 
                 <div className="flex flex-col items-center space-y-2 mb-6 md:mb-12">
                     {/* PFW Logo/Text - Responsive sizing */}
                     <h2 className="font-display text-2xl md:text-4xl lg:text-5xl text-black leading-none tracking-tighter uppercase">
                         Punta del Este<br />
-                        Food & Wine
+                        Food <span className="font-ampersand">&</span> Wine
                     </h2>
                     <span className="text-[10px] md:text-sm uppercase tracking-[0.25em] text-black font-semibold mt-2 md:mt-3">
                         Presenta:
@@ -58,7 +58,7 @@ export default function Hero() {
             </div>
 
             {/* Right Column: Image */}
-            <div className="w-full md:w-[55%] h-[40vh] md:h-screen relative flex items-start justify-center p-4 md:p-0">
+            <div className="w-full md:w-[55%] h-[40vh] md:h-screen relative flex items-start justify-center p-0 md:p-0">
                 {/* items-start on mobile to pull image up if needed, or justify-center */}
                 <img
                     src="/assets/slides/banner.png"

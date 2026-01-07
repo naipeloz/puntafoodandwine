@@ -45,14 +45,14 @@ export default function Navbar({ variant = "transparent" }: NavbarProps) {
 
     return (
         <nav
-            className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isMobileMenuOpen
-                    ? "bg-[#E6E4DE] py-4"
-                    : isScrolled
-                        ? "bg-white/90 py-4 shadow-md backdrop-blur-md"
-                        : "bg-transparent py-6"
+            className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ease-in-out ${isMobileMenuOpen
+                ? "bg-[#E6E4DE] py-4"
+                : isScrolled
+                    ? "bg-white/90 py-4 shadow-md backdrop-blur-md"
+                    : "bg-transparent py-6"
                 }`}
         >
-            <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
+            <div className="max-w-7xl mx-auto px-4 md:px-6 flex justify-between items-center">
                 {/* Logo */}
                 {/* Always show logo, swap version based on state */}
                 <div className="z-50 relative">
@@ -75,7 +75,7 @@ export default function Navbar({ variant = "transparent" }: NavbarProps) {
                         Universo Troisgros
                     </a>
                     <a href="/#tickets" className={`text-black/80 hover:text-black text-sm uppercase tracking-wider transition-colors`}>
-                        Entradas
+                        Tickets
                     </a>
                     <a href="/#contact" className={`text-black/80 hover:text-black text-sm uppercase tracking-wider transition-colors`}>
                         Contacto
@@ -104,10 +104,10 @@ export default function Navbar({ variant = "transparent" }: NavbarProps) {
                 </div>
 
                 {/* Mobile Menu Overlay */}
-                <div className={`fixed inset-0 bg-[#E6E4DE] z-40 flex flex-col items-center justify-center space-y-8 transition-opacity duration-300 md:hidden ${isMobileMenuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"}`}>
+                <div className={`fixed inset-0 bg-[#E6E4DE] z-40 flex flex-col items-center justify-center space-y-8 transition-all duration-500 ease-in-out md:hidden ${isMobileMenuOpen ? "opacity-100 translate-y-0 pointer-events-auto" : "opacity-0 -translate-y-4 pointer-events-none"}`}>
                     <a href="/" onClick={() => setIsMobileMenuOpen(false)} className="text-2xl text-black font-display uppercase tracking-widest">Inicio</a>
                     <a href="/universo-troisgros" onClick={() => setIsMobileMenuOpen(false)} className="text-2xl text-black font-display uppercase tracking-widest">Universo Troisgros</a>
-                    <a href="/#tickets" onClick={() => setIsMobileMenuOpen(false)} className="text-2xl text-black font-display uppercase tracking-widest">Entradas</a>
+                    <a href="/#tickets" onClick={() => setIsMobileMenuOpen(false)} className="text-2xl text-black font-display uppercase tracking-widest">Tickets</a>
                     <a href="/#contact" onClick={() => setIsMobileMenuOpen(false)} className="text-2xl text-black font-display uppercase tracking-widest">Contacto</a>
                     <a href="https://redtickets.uy/evento/PFW-presenta-Universo-Troisgros/26239/" target="_blank" rel="noopener noreferrer" className="bg-primary text-white text-sm font-bold py-3 px-12 rounded-full uppercase tracking-widest shadow-xl">
                         Comprar Ticket

@@ -7,7 +7,7 @@ const CHEFS = [
         name: "Thomas Troisgros",
         subtitle: "Brasil",
         image: "/assets/chefs/troisgos/img_full.jpeg",
-        description: "Nacido en una familia legendaria de la gastronomía, Thomas lleva el legado Troisgros con una visión moderna y personal. Al frente de Oseille y Toto, combina técnica francesa con alma brasileña.",
+        description: 'Thomas Troisgros es un chef formado en el Culinary Institute of America, con trayectoria en reconocidas cocinas de Estados Unidos y España. En Río de Janeiro, estuvo al frente del premiado Olympe y actualmente lidera diversos proyectos de autor. Entre sus trabajos más recientes destacan Toto y Oseille —un concepto de "fun dining" galardonado con una estrella Michelin en 2025 y posicionado como el 65º mejor restaurante por el 50 Best Latin America— además del bar Tijolada, en Ipanema. En el último año, fue elegido chef del año por GQ Men of The Year y recibió una distinción de una cuchilla (Excellent) por The Best Chef Awards.',
         link: "https://www.instagram.com/thomastroisgros/"
     },
     {
@@ -22,7 +22,7 @@ const CHEFS = [
 export default function ChefsSection() {
     return (
         <section id="chefs" className="py-20 bg-[#F1EFEA]">
-            <div className="max-w-7xl mx-auto px-6">
+            <div className="max-w-7xl mx-auto px-4 md:px-6">
                 <div className="text-center mb-16">
                     {/* <span className="text-sm uppercase tracking-widest text-black/50 mb-2 block">
                         Talento Culinario
@@ -51,14 +51,14 @@ export default function ChefsSection() {
                             </div>
 
                             {/* Text Container */}
-                            <div className="w-full md:w-1/2 flex flex-col justify-center p-8 md:p-16 bg-[#F1EFEA] transition-colors group-hover:bg-[#fcf8f5]">
+                            <div className="w-full md:w-1/2 flex flex-col justify-center p-6 md:p-16 bg-[#F1EFEA] transition-colors group-hover:bg-[#fcf8f5]">
                                 <h3 className="font-display text-3xl md:text-5xl text-black mb-2 group-hover:text-primary transition-colors">
                                     {chef.name}
                                 </h3>
-                                <p className={`uppercase tracking-widest text-xs font-bold mb-6 ${idx === 0 ? 'text-[#B67784]' : 'text-[#E67E22]'}`}>
+                                <p className={`uppercase tracking-widest text-xs font-bold mb-4 ${idx === 0 ? 'text-[#B67784]' : 'text-[#E67E22]'}`}>
                                     {chef.subtitle}
                                 </p>
-                                <p className="text-black/70 font-light text-lg leading-relaxed max-w-lg">
+                                <p className="text-black/70 font-light text-base md:text-lg leading-snug md:leading-relaxed max-w-lg">
                                     {chef.description}
                                 </p>
                                 {/* <div className="w-12 h-0.5 bg-primary/30 group-hover:w-24 group-hover:bg-primary transition-all duration-500 mt-8"></div> */}

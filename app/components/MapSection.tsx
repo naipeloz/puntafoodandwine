@@ -4,6 +4,7 @@ import { useState } from "react";
 
 export default function MapSection() {
     const [status, setStatus] = useState<"idle" | "submitting" | "success">("idle");
+    const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
@@ -13,6 +14,7 @@ export default function MapSection() {
         const subject = (form.elements.namedItem('subject') as HTMLInputElement).value;
 
         setStatus("submitting");
+        setErrorMessage(null);
 
         try {
             const response = await fetch('/api/contact', {
@@ -32,7 +34,7 @@ export default function MapSection() {
             form.reset();
         } catch (error: any) {
             console.error('Submission error:', error);
-            alert(`Error al enviar: ${error.message}`); // Verify user sees this
+            setErrorMessage(error.message || "Ocurrió un error inesperado. Por favor intenta nuevamente.");
             setStatus("idle"); // reset for retry
         }
     };
@@ -60,6 +62,12 @@ export default function MapSection() {
                         </div>
                     ) : (
                         <form className="space-y-6 max-w-xl mx-auto w-full" onSubmit={handleSubmit}>
+                            {errorMessage && (
+                                <div className="bg-red-500/20 border border-red-500/50 rounded-lg p-4 text-white text-sm text-center animate-in fade-in slide-in-from-top-2">
+                                    <p className="font-bold mb-1">Error al enviar el mensaje:</p>
+                                    <p>{errorMessage}</p>
+                                </div>
+                            )}
                             <input
                                 required
                                 name="name"

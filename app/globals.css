@@ -10,6 +10,7 @@
 
   --font-display: var(--font-newake);
   --font-sans: var(--font-actay);
+  --font-acumin: var(--font-acumin);
 }
 
 :root {
@@ -37,9 +38,17 @@ body {
   overflow-x: hidden;
 }
 
-strong, b {
+strong,
+b {
   font-weight: 700;
-  color: #000000; /* Ensure bold text is fully black/opaque to stand out against black/70 text */
+  color: #000000;
+  /* Ensure bold text is fully black/opaque to stand out against black/70 text */
+}
+
+.font-ampersand {
+  font-family: var(--font-acumin), sans-serif;
+  font-weight: bold;
+  /* font-style: italic; Optional, based on preference for & symbol */
 }
 
 @layer utilities {
