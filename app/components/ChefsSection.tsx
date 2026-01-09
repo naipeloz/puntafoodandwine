@@ -7,8 +7,8 @@ const CHEFS = [
         name: "Thomas Troisgros",
         subtitle: "Brasil",
         image: "/assets/chefs/troisgos/img_full.jpeg",
-        description: 'Thomas Troisgros es un chef formado en el Culinary Institute of America, con trayectoria en reconocidas cocinas de Estados Unidos y España. En Río de Janeiro, estuvo al frente del premiado Olympe y actualmente lidera diversos proyectos de autor. Entre sus trabajos más recientes destacan Toto y Oseille —un concepto de "fun dining" galardonado con una estrella Michelin en 2025 y posicionado como el 65º mejor restaurante por el 50 Best Latin America— además del bar Tijolada, en Ipanema. En el último año, fue elegido chef del año por GQ Men of The Year y recibió una distinción de una cuchilla (Excellent) por The Best Chef Awards.',
-        link: "https://www.instagram.com/thomastroisgros/"
+        description: 'Formado en el prestigioso Culinary Institute of America, Thomas regresó a Río de Janeiro para ponerse al frente del multipremiado Olympe. Hoy lidera varios restaurantes de autor, entre ellos Toto y Oseille, este último un concepto de fun dining distinguido con una estrella Michelin en 2025 y ubicado en el puesto 65 del Latin America’s 50 Best Restaurants, además del bar Tijolada, en Ipanema. En 2025 fue elegido Chef del Año por GQ Men of the Year y recibió una cuchilla (Excellent) en The Best Chef Awards. Con toda su experiencia, la cocina de Thomas une la mejor tradición francesa, con el alma tropical en cada plato.',
+        link: "https://www.instagram.com/ttroisgros/"
     },
     {
         name: "Santiago Inzaurralde",

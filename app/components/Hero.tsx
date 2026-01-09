@@ -6,9 +6,9 @@ export default function Hero() {
     return (
         <section className="relative w-full min-h-screen bg-[#E6E4DE] flex flex-col md:flex-row pt-36 md:pt-0">
             {/* Left Column: Text Content */}
-            <div className="w-full md:w-[45%] flex flex-col justify-center items-center text-center px-4 py-8 md:py-0 z-10">
+            <div className="w-full md:w-[45%] flex flex-col justify-center items-center text-center px-4 py-2 md:py-0 z-10">
 
-                <div className="flex flex-col items-center space-y-2 mb-6 md:mb-12">
+                <div className="flex flex-col items-center mb-2 md:mb-12">
                     {/* PFW Logo/Text - Responsive sizing */}
                     <h2 className="font-display text-2xl md:text-4xl lg:text-5xl text-black leading-none tracking-tighter uppercase">
                         Punta del Este<br />
@@ -20,24 +20,24 @@ export default function Hero() {
                 </div>
 
                 {/* Main Title - Responsive sizing with fluid adjustment */}
-                <h1 className="font-display text-5xl md:text-7xl lg:text-7xl xl:text-8xl 2xl:text-[8rem] leading-[0.8] text-black mb-6 uppercase tracking-tight">
+                <h1 className="font-display text-4xl md:text-7xl lg:text-7xl xl:text-8xl 2xl:text-[8rem] leading-[0.8] text-black mb-6 uppercase tracking-tight">
                     Universo<br />
                     Troisgros
                 </h1>
 
                 {/* Subtitle */}
-                <span className="font-sans font-black text-xs md:text-base lg:text-xl uppercase tracking-wide text-black mb-8 md:mb-16">
+                <span className="font-sans font-black text-base md:text-base lg:text-xl uppercase tracking-wide text-black mb-4 md:mb-16">
                     By Chef Thomas Troisgros
                 </span>
 
                 {/* Info Block */}
-                <div className="flex flex-col items-center space-y-1 md:space-y-2 text-black font-bold text-xs md:text-base lg:text-xl uppercase tracking-wide mb-8 md:mb-12">
+                <div className="flex flex-col items-center md:space-y-2 text-black font-bold text-xs md:text-base lg:text-xl uppercase tracking-wide mb-8 md:mb-12">
                     <p>La Susana — Jose Ignacio</p>
-                    <p>19:30 — 5 y 6 de Febrero</p>
+                    <p>En — 5 y 6 de Febrero</p>
                 </div>
 
                 {/* Itau Logo */}
-                <div className="mb-8 md:mb-0">
+                <div className="mb-4 md:mb-0">
                     <img
                         src="/assets/sponsors/itau/logo_personal_bank.png"
                         alt="Itau Personal Bank"
@@ -68,7 +68,7 @@ export default function Hero() {
             </div>
 
             {/* Desktop Scroll Indicator */}
-            <div className="absolute bottom-8 left-[25%] -translate-x-1/2 hidden md:flex flex-col items-center gap-2 opacity-50 animate-bounce text-black">
+            <div className="absolute bottom-8 left-1/2 md:left-[25%] -translate-x-1/2 flex flex-col items-center gap-2 opacity-50 animate-bounce text-black">
                 <span className="text-[10px] uppercase tracking-widest">Descubrí Más</span>
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 14l-7 7m0 0l-7-7m7 7V3" />

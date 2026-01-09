@@ -1,6 +1,6 @@
 export default function TicketsSection() {
     return (
-        <section className="bg-secondary py-24 px-4">
+        <section className="bg-secondary py-6 md:py-12 px-4">
             <div className="max-w-2xl mx-auto text-center">
                 <h2 className="font-display text-4xl text-black mb-4 uppercase">Tickets</h2>
                 <p className="text-black/60 mb-12 font-light">
@@ -18,29 +18,29 @@ export default function TicketsSection() {
                     </div>
                     <p className="text-black/40 text-sm mb-6">por persona</p>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8 text-center md:text-left">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 mb-8 text-center md:text-left">
                         {/* Event Info */}
-                        <div className="space-y-4">
-                            <div className="flex items-center md:items-start justify-center md:justify-start text-black/70 flex-col md:flex-row gap-1 md:gap-0">
+                        <div className="contents md:flex md:flex-col md:space-y-4">
+                            <div className="order-1 md:order-none flex items-center md:items-start justify-center md:justify-start text-black/70 flex-col md:flex-row gap-1 md:gap-0">
                                 <span className="font-bold md:mr-2 text-primary">Lugar:</span>
                                 <span className="font-light">La Susana - VIK, José Ignacio</span>
                             </div>
-                            <div className="flex items-center md:items-start justify-center md:justify-start text-black/70 flex-col md:flex-row gap-1 md:gap-0">
+                            <div className="order-2 md:order-none flex items-center md:items-start justify-center md:justify-start text-black/70 flex-col md:flex-row gap-1 md:gap-0">
                                 <span className="font-bold md:mr-2 text-primary">Fecha:</span>
                                 <span className="font-light">5 y 6 de febrero | 19:30 Hs.</span>
                             </div>
-                            <div className="flex items-center md:items-start justify-center md:justify-start text-black/70 flex-col md:flex-row gap-1 md:gap-0">
+                            <div className="order-4 md:order-none flex items-center md:items-start justify-center md:justify-start text-black/70 flex-col md:flex-row gap-1 md:gap-0">
                                 <span className="font-bold md:mr-2 text-primary">Dress Code:</span>
                                 <span className="font-light">Casual</span>
                             </div>
                         </div>
 
                         {/* Includes */}
-                        <div className="space-y-1 text-center md:text-left">
+                        <div className="order-3 md:order-none space-y-1 text-center md:text-left">
                             <p className="font-bold text-primary mb-2">Incluye</p>
-                            <p className="text-sm text-black/60 font-light">Degustación libre</p>
+                            <p className="text-sm text-black/60 font-light">Degustación libre de:</p>
                             <p className="text-sm text-black/60 font-light">Todos los platos de los Chefs</p>
-                            <p className="text-sm text-black/60 font-light">Vinos seleccionados</p>
+                            <p className="text-sm text-black/60 font-light">Vinos seleccionados de Francia, Italia, España, Chile, Argentina, y Uruguay</p>
                             <p className="text-sm text-black/60 font-light">Tragos de autor</p>
                             <p className="text-sm text-black/60 font-light">Bebidas sin alcohol</p>
                             <p className="text-sm text-black/60 font-light">Postres</p>
@@ -56,10 +56,26 @@ export default function TicketsSection() {
 
                     {/* Itau Discount */}
                     <div className="border-t border-dashed border-primary/20 pt-6 mt-6">
-                        <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-8">
-                            <img src="/assets/itau-25.png" alt="Itau 25% Off" className="h-10 object-contain" />
-                            <img src="/assets/itau-15.png" alt="Itau 15% Off" className="h-10 object-contain" />
-                            <img src="/assets/itau-volar.png" alt="Itau Volar" className="h-10 object-contain" />
+                        <div className="flex flex-col gap-4 text-center md:text-left">
+                            <div className="w-full">
+                                <h3 className="font-bold text-primary text-[10px] md:text-xs uppercase tracking-wide mb-1 leading-tight">
+                                    Preventa exclusiva del lunes 12 al miércoles 14 de enero
+                                </h3>
+                                <p className="text-xs text-black/70 font-light leading-snug">
+                                    <strong className="font-bold">25% menos</strong> con tarjetas Personal Bank. Incluye Infinite y Black.
+                                </p>
+                            </div>
+                            <div className="w-full">
+                                <h3 className="font-bold text-primary text-[10px] md:text-xs uppercase tracking-wide mb-1 leading-tight">
+                                    Del 15 al 31 de enero:
+                                </h3>
+                                <p className="text-xs text-black/70 font-light leading-snug">
+                                    <strong className="font-bold">15% menos</strong> con tarjetas de crédito Platinum, Infinite y Black y tarjetas de débito y crédito Personal Bank.
+                                </p>
+                            </div>
+                            <div className="w-full flex items-center justify-center pt-2">
+                                <img src="/assets/itau-volar.png" alt="Itau Volar" className="h-8 object-contain opacity-80" />
+                            </div>
                         </div>
                     </div>
                 </div>

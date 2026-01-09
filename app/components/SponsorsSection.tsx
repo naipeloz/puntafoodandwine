@@ -58,7 +58,7 @@ export default function SponsorsSection() {
 
                 {/* MEDICAL PARTNERS */}
                 <div className="w-full">
-                    <span className="text-[10px] uppercase tracking-[0.2em] text-[#B67784] block mb-6">Medical Partners</span>
+                    <span className="text-[10px] uppercase tracking-[0.2em] text-[#B67784] block mb-6">Medical Partner</span>
                     <div className="flex flex-wrap justify-center items-center gap-8 opacity-80">
                         <img src="/assets/sponsors/bluecross/logo_vertical_white.png" alt="Blue Cross" className="h-20 md:h-24 object-contain" />
                     </div>

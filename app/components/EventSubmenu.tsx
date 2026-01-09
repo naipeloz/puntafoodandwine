@@ -10,9 +10,9 @@ export default function EventSubmenu() {
                 <Link href="#chefs" className="text-xs uppercase tracking-widest font-bold text-white/70 hover:text-white transition-colors whitespace-nowrap">
                     Chefs
                 </Link>
-                <Link href="#estaciones" className="text-xs uppercase tracking-widest font-bold text-white/70 hover:text-white transition-colors whitespace-nowrap">
+                {/* <Link href="#estaciones" className="text-xs uppercase tracking-widest font-bold text-white/70 hover:text-white transition-colors whitespace-nowrap">
                     Estaciones
-                </Link>
+                </Link> */}
                 <Link href="#entradas" className="text-xs uppercase tracking-widest font-bold text-white/70 hover:text-white transition-colors whitespace-nowrap">
                     Tickets
                 </Link>

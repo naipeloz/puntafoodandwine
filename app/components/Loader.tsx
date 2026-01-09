@@ -35,16 +35,15 @@ export default function Loader() {
 
     return (
         <div
-            className={`fixed inset-0 z-[9999] bg-black flex items-center justify-center transition-opacity duration-1000 ease-in-out ${isLoading ? "opacity-100" : "opacity-0 pointer-events-none"}`}
+            className={`fixed inset-0 z-[9999] bg-[#E6E4DE] flex items-center justify-center transition-opacity duration-1000 ease-in-out ${isLoading ? "opacity-100" : "opacity-0 pointer-events-none"}`}
             aria-hidden={!isLoading}
         >
             <div className="flex flex-col items-center">
-                {/* Logo - Using vertical white if available or inverted horizontal */}
-                <img
-                    src="/assets/logos_pfw/vertical-white.png" // Assuming this exists from previous file listing
-                    alt="Punta Food & Wine Loader"
-                    className="w-32 md:w-48 animate-pulse"
-                />
+                {/* Logo / Text */}
+                <h2 className="font-display text-2xl md:text-4xl lg:text-5xl text-black leading-none tracking-tighter uppercase text-center animate-pulse">
+                    Punta del Este<br />
+                    Food <span className="font-ampersand">&</span> Wine
+                </h2>
 
                 {/* Optional Spinner or Text */}
                 {/* <div className="mt-8 w-16 h-1 bg-white/20 overflow-hidden rounded-full">
