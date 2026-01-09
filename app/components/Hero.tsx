@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function Hero() {
     return (
-        <section className="relative w-full min-h-screen bg-[#E6E4DE] flex flex-col md:flex-row pt-36 md:pt-0">
+        <section className="relative w-full min-h-screen bg-[#E6E4DE] flex flex-col md:flex-row pt-12 md:pt-0">
             {/* Left Column: Text Content */}
             <div className="w-full md:w-[45%] flex flex-col justify-center items-center text-center px-4 py-2 md:py-0 z-10">
 
@@ -20,7 +20,7 @@ export default function Hero() {
                 </div>
 
                 {/* Main Title - Responsive sizing with fluid adjustment */}
-                <h1 className="font-display text-4xl md:text-7xl lg:text-7xl xl:text-8xl 2xl:text-[8rem] leading-[0.8] text-black mb-6 uppercase tracking-tight">
+                <h1 className="font-display text-3xl md:text-7xl lg:text-7xl xl:text-8xl 2xl:text-[8rem] leading-[0.8] text-black mb-6 uppercase tracking-tight">
                     Universo<br />
                     Troisgros
                 </h1>
