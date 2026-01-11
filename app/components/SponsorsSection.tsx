@@ -41,8 +41,8 @@ export default function SponsorsSection() {
                 <div className="w-full">
                     {/* <span className="text-[10px] uppercase tracking-[0.2em] text-[#B67784] block mb-6">Medical Partners</span> */}
                     <div className="flex flex-wrap justify-center items-center gap-6 md:gap-8 opacity-80">
-                        <img src="/assets/sponsors/bodegas/iber/logo.png" alt="Iber" className="h-20 md:h-24 object-contain invert " />
-                        <img src="/assets/sponsors/bodegas/olivos_de_las_animas/logo_black.png" alt="Olivos de las Animas" className="h-20 md:h-24 object-contain invert " />
+                        <img src="/assets/sponsors/BODEGAS/iber/logo.png" alt="Iber" className="h-20 md:h-24 object-contain invert " />
+                        <img src="/assets/sponsors/BODEGAS/olivos_de_las_animas/logo_black.png" alt="Olivos de las Animas" className="h-20 md:h-24 object-contain invert " />
                     </div>
                 </div>
 
@@ -50,11 +50,11 @@ export default function SponsorsSection() {
                 <div className="w-full">
                     <span className="text-[12px] uppercase tracking-[0.2em] text-[#B67784] block mb-6">Bodegas</span>
                     <div className="flex flex-wrap justify-center items-center gap-8 opacity-80">
-                        <img src="/assets/sponsors/bodegas/sacromonte/logo_white.png" alt="Sacromonte" className="h-20 md:h-24 object-contain" />
-                        <img src="/assets/sponsors/bodegas/gerard_bertrand/logo.png" alt="Gerard Bertrand" className="h-20 md:h-24 object-contain invert " />
-                        <img src="/assets/sponsors/bodegas/antinori/logo.png" alt="Antinori" className="h-20 md:h-24 object-contain invert " />
-                        <img src="/assets/sponsors/bodegas/zuccardi/logo.png" alt="Zuccardi" className="h-20 md:h-24 object-contain invert " />
-                        <img src="/assets/sponsors/bodegas/paa/logo.png" alt="PAA" className="h-20 md:h-24 object-contain invert " />
+                        <img src="/assets/sponsors/BODEGAS/sacromonte/logo_white.png" alt="Sacromonte" className="h-20 md:h-24 object-contain" />
+                        <img src="/assets/sponsors/BODEGAS/gerard_bertrand/logo.png" alt="Gerard Bertrand" className="h-20 md:h-24 object-contain invert " />
+                        <img src="/assets/sponsors/BODEGAS/antinori/logo.png" alt="Antinori" className="h-20 md:h-24 object-contain invert " />
+                        <img src="/assets/sponsors/BODEGAS/zuccardi/logo.png" alt="Zuccardi" className="h-20 md:h-24 object-contain invert " />
+                        <img src="/assets/sponsors/BODEGAS/paa/logo.png" alt="PAA" className="h-20 md:h-24 object-contain invert " />
                     </div>
                 </div>
 
