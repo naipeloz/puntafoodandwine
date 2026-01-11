@@ -33,7 +33,7 @@ export default function RecapSection() {
                 <iframe
                     ref={videoRef}
                     className="w-full h-full scale-[1.35] pointer-events-none select-none pb[56.25%]"
-                    src={`https://www.youtube.com/embed/yKuPtD0thLU?autoplay=1&mute=${isInteractive ? 0 : 1}&controls=0&loop=1&playlist=yKuPtD0thLU&playsinline=1&showinfo=0&rel=0&enablejsapi=1`}
+                    src={`https://www.youtube-nocookie.com/embed/yKuPtD0thLU?autoplay=1&mute=${isInteractive ? 0 : 1}&controls=0&loop=1&playlist=yKuPtD0thLU&playsinline=1&showinfo=0&rel=0&enablejsapi=1`}
                     title="REVIVÍ LA EDICIÓN 2025"
                     allow="autoplay; encrypted-media"
                     allowFullScreen
