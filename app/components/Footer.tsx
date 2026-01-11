@@ -15,7 +15,7 @@ export default function Footer() {
                 <div className="flex gap-6 text-xs uppercase tracking-widest font-light text-white/70">
                     <a href="https://www.instagram.com/puntafoodandwine/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Instagram</a>
                     <a href="/#contact" className="hover:text-primary transition-colors">Contacto</a>
-                    <a href="#" className="hover:text-primary transition-colors">Prensa</a>
+                    {/* <a href="#" className="hover:text-primary transition-colors">Prensa</a> */}
                 </div>
 
             </div>
