@@ -5,21 +5,48 @@ import { useEffect, useRef, useState } from "react";
 export default function RecapSection() {
     const videoRef = useRef<HTMLIFrameElement>(null);
     const [isInteractive, setIsInteractive] = useState(false);
+    const [showModal, setShowModal] = useState(false);
+    const [isMobile, setIsMobile] = useState(false);
 
     const [isPlaying, setIsPlaying] = useState(true);
 
+    // Detect Mobile
+    useEffect(() => {
+        const checkMobile = () => {
+            setIsMobile(window.innerWidth < 768);
+        };
+
+        checkMobile();
+        window.addEventListener('resize', checkMobile);
+        return () => window.removeEventListener('resize', checkMobile);
+    }, []);
+
     const togglePlay = () => {
         if (!videoRef.current) return;
-
         const action = isPlaying ? 'pauseVideo' : 'playVideo';
         videoRef.current.contentWindow?.postMessage(`{"event":"command","func":"${action}","args":""}`, '*');
         setIsPlaying(!isPlaying);
     };
 
-    // Reset state when closing interactive mode
+    const handleOpenExperience = () => {
+        if (isMobile) {
+            setShowModal(true);
+        } else {
+            setIsInteractive(true);
+        }
+    };
+
+    // Handle Interactive Mode (Desktop) - Unmute/Mute
     useEffect(() => {
-        if (!isInteractive && videoRef.current) {
-            // Ensure video plays when resetting
+        if (!videoRef.current) return;
+
+        if (isInteractive) {
+            // Unmute and ensure playing
+            videoRef.current.contentWindow?.postMessage('{"event":"command","func":"unMute","args":""}', '*');
+            videoRef.current.contentWindow?.postMessage('{"event":"command","func":"setVolume","args":"[100]"}', '*');
+        } else {
+            // Mute and ensure playing (background loop)
+            videoRef.current.contentWindow?.postMessage('{"event":"command","func":"mute","args":""}', '*');
             setIsPlaying(true);
             videoRef.current.contentWindow?.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
         }
@@ -33,7 +60,7 @@ export default function RecapSection() {
                 <iframe
                     ref={videoRef}
                     className="w-full h-full scale-[1.35] pointer-events-none select-none pb[56.25%]"
-                    src={`https://www.youtube-nocookie.com/embed/yKuPtD0thLU?autoplay=1&mute=${isInteractive ? 0 : 1}&controls=0&loop=1&playlist=yKuPtD0thLU&playsinline=1&showinfo=0&rel=0&enablejsapi=1`}
+                    src={`https://www.youtube-nocookie.com/embed/yKuPtD0thLU?autoplay=1&mute=1&controls=0&loop=1&playlist=yKuPtD0thLU&playsinline=1&showinfo=0&rel=0&enablejsapi=1`}
                     title="REVIVÍ LA EDICIÓN 2025"
                     allow="autoplay; encrypted-media"
                     allowFullScreen
@@ -44,7 +71,7 @@ export default function RecapSection() {
             </div>
 
             {/* Controls Container - Only visible when interactive */}
-            <div className={`absolute top-8 right-8 z-50 flex items-center gap-4 transition-all duration-500 ${isInteractive ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4 pointer-events-none'}`}>
+            <div className={`absolute top-8 right-8 z-50 hidden md:flex items-center gap-4 transition-all duration-500 ${isInteractive ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4 pointer-events-none'}`}>
 
                 {/* Play/Pause Button */}
                 <button
@@ -85,7 +112,7 @@ export default function RecapSection() {
 
                 {/* Play Button */}
                 <button
-                    onClick={() => setIsInteractive(true)}
+                    onClick={handleOpenExperience}
                     className="group mb-16 flex flex-col items-center gap-4 transition-transform duration-300 hover:scale-105"
                 >
                     <div className="w-20 h-20 rounded-full border border-white/30 flex items-center justify-center bg-white/10 backdrop-blur-sm group-hover:bg-white group-hover:text-black transition-all">
@@ -141,6 +168,31 @@ export default function RecapSection() {
                 </div>
 
             </div>
+
+            {/* Mobile Video Modal */}
+            {showModal && (
+                <div className="fixed inset-0 z-[100] bg-black/95 flex items-center justify-center p-4 animate-in fade-in duration-300">
+                    {/* Close Button */}
+                    <button
+                        onClick={() => setShowModal(false)}
+                        className="absolute top-4 right-4 text-white bg-white/10 p-2 rounded-full hover:bg-white/20 z-50"
+                    >
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+
+                    <div className="w-full max-w-4xl aspect-video rounded-2xl overflow-hidden shadow-2xl relative">
+                        <iframe
+                            className="w-full h-full"
+                            src={`https://www.youtube-nocookie.com/embed/yKuPtD0thLU?autoplay=1&mute=1&controls=1&playsinline=1&modestbranding=1&rel=0`}
+                            title="PFW Recap Video"
+                            allow="autoplay; encrypted-media; gyroscope; picture-in-picture"
+                            allowFullScreen
+                        />
+                    </div>
+                </div>
+            )}
         </section>
     );
 }
